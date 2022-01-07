@@ -5,7 +5,7 @@ In this project, we analyze motor vehicle collisions in New York City (NYC) to:
 - Determine when and where collisions occur
 - Make it easier to see where serious collisions (collisions with deaths and injuries) are occurring
 - Suggest causes and interventions to investigate
-- Highlight problematic locations and areas that may not be completely obvious
+- Highlight problematic locations and areas that may not be obvious
 <br><br>
 
 ### To View Website
