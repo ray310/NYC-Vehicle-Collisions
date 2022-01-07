@@ -14,7 +14,7 @@ completed github-pages link goes here
 
 ### To View Notebook Maps
 Project notebooks with maps can best be viewed using Jupyter's nbviewer.  
-[Click here to view project notebooks](https://nbviewer.org/github/ray310/NYC-Vehicle-Collisions/tree/main/) 
+[View project notebooks with nbviewer](https://nbviewer.org/github/ray310/NYC-Vehicle-Collisions/tree/main/) 
 
 _Note that some notebooks may be slow to display or may not display well on mobile devices_
 <br><br>
