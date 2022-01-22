@@ -33,6 +33,7 @@ def make_grouped_bar_chart(
     title="",
     x_label="",
     y_label="",
+    legend_labels="",
     style="default",
     save="",
     fig_size=(18, 10),
@@ -49,6 +50,8 @@ def make_grouped_bar_chart(
     bar_fontsize=16,
     legend_fontsize=16,
     legend_bbox=(1.1, 0.9),
+    legend_labelspacing=0.7,
+    legend_handleheight=1.5,
     bar_label_bbox={"facecolor": "none", "edgecolor": "none"},
 ):
     """Makes a grouped bar chart from a pd.DataFrame where the DataFrame index represents
@@ -60,7 +63,7 @@ def make_grouped_bar_chart(
         bar_width = (bar_group_width / len(df.columns)) * (1 - relative_gap)
 
         # x labels and location
-        x_labels = df.index  # + (bar_group_width / 2)
+        x_labels = df.index
         x_label_locs = []
         for x in range(len(x_labels)):
             x_loc = -bar_width + (bars_no_space_width / 2) + (bar_group_width * x)
@@ -113,7 +116,17 @@ def make_grouped_bar_chart(
             )
 
         # legend
-        fig.legend(fontsize=legend_fontsize, framealpha=0.0, bbox_to_anchor=legend_bbox)
+        legend_args = {
+            "fontsize": legend_fontsize,
+            "framealpha": 0.0,
+            "bbox_to_anchor": legend_bbox,
+            "labelspacing": legend_labelspacing,
+            "handleheight": legend_handleheight,
+        }
+        if legend_labels:  # manually labeling legend is sensitive to order
+            fig.legend(labels=legend_labels, **legend_args)
+        else:
+            fig.legend(**legend_args)
     if save:
         plt.savefig(save, bbox_inches="tight")
     plt.show()
