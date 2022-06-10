@@ -32,9 +32,9 @@ https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz
 ### Reproducing Processed Data and Analysis
 1) Download and save data to local directory, e.g. `/data/raw`
 2) Create and activate project virtual environment 
-   - Python 3.8.12 is used
+   - Python 3.9.12 is used
    - Virtual environment can be created from either
    `conda_environment.yaml` or `requirements.txt`
 3) Update data input and output parameters in `process_raw_data.py` as appropriate
-4) Run `process_raw_data.py`
+4) Run `process_raw_data.py` (this script may take a while)
 5) Run notebooks

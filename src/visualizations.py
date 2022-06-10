@@ -1,11 +1,11 @@
 """Helper functions for project visualizations"""
 
-import numpy as np
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap
 import folium
 import folium.plugins
+import numpy as np
+import matplotlib as mpl
+from matplotlib.colors import ListedColormap
+import matplotlib.pyplot as plt
 
 
 HEATMAP_COLORS = [
@@ -52,10 +52,10 @@ def make_grouped_bar_chart(
     legend_bbox=(1.1, 0.9),
     legend_labelspacing=0.7,
     legend_handleheight=1.5,
-    bar_label_bbox={"facecolor": "none", "edgecolor": "none"},
+    bar_label_bbox=None,
 ):
-    """Makes a grouped bar chart from a pd.DataFrame where the DataFrame index represents
-    the groupings and columns represent the individual bar heights"""
+    """Makes a grouped bar chart from a pd.DataFrame where the DataFrame index
+    represents the groupings and columns represent the individual bar heights"""
     with plt.style.context(style):
         # bar and bar group sizes
         bar_group_width = fig_size[0] / len(df.index)
@@ -107,6 +107,8 @@ def make_grouped_bar_chart(
             bar_labels.append(ax.bar(x, height=y, width=bar_width, label=col_name))
 
         for bl in bar_labels:
+            if bar_label_bbox is None:
+                bar_label_bbox = {"facecolor": "none", "edgecolor": "none"}
             ax.bar_label(
                 bl,
                 labels=[f"{val:,.0f}" for val in bl.datavalues],
