@@ -1,0 +1,5 @@
+remote_theme: chrisrhymes/bulma-clean-theme
+fixed_navbar: top
+footer_menu: footer_links
+
+# theme: bulma-clean-theme
