@@ -8,11 +8,11 @@ In this project, we analyze motor vehicle collisions in New York City (NYC) to:
 - Highlight problematic locations and areas that may not be obvious
 <br><br>
 
-### To View Website
-completed github-pages link goes here
+### To View Project Website
+[https://ray310.github.io/NYC-Vehicle-Collisions/](https://ray310.github.io/NYC-Vehicle-Collisions/)
 <br><br>
 
-### To View Notebook Maps
+### To Directly View Notebooks with Full Content
 Project notebooks with maps can best be viewed using Jupyter's nbviewer.  
 [View project notebooks with nbviewer](https://nbviewer.org/github/ray310/NYC-Vehicle-Collisions/tree/main/) 
 
