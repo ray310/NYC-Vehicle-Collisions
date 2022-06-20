@@ -1,0 +1,40 @@
+- name: Collision Maps
+  link: /content/maps
+  dropdown:
+    - name: Fatal Collisions
+      link: /content/maps/fatal_collisions
+    - name: Pedestrian / Cyclist Collisions
+      link: /content/maps/non_motor_collisions
+    - name: Serious Collisions
+      link: /content/maps/serious_collisions
+- name: Hot Spots
+  link: /content/hotspots
+  dropdown:
+    - name: Dangerous Locations
+      link: /content/hotspots/points_serious
+    - name: Dangerous Locations for Pedestrians / Cyclists
+      link: /content/hotspots/points_non_motor
+    - name: Dangerous Areas
+      link: /content/hotspots/clusters_serious
+    - name: Dangerous Areas for Pedestrians / Cyclists
+      link: /content/hotspots/clusters_non_motor
+- name: Trends
+  link: /content/trends
+  dropdown:
+    - name: Yearly
+      link: /content/trends/yearly
+    - name: Monthly
+      link: /content/trends/monthly
+    - name: Weekly
+      link: /content/trends/weekly
+    - name: Hourly
+      link: /content/trends/hourly
+- name: Collisions by Police Precinct
+  link: /content/police
+  dropdown:
+    - name: Fatal Collisions
+      link: /content/police/precinct_fatal
+    - name: Pedestrian / Cyclist Collisions
+      link: /content/police/precinct_non_motor
+    - name: Serious Collisions
+      link: /content/police/precinct_serious
