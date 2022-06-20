@@ -7,12 +7,14 @@ import geopandas as gpd
 from shapely.geometry import shape, Point
 from shapely.strtree import STRtree
 
-
-PROCESSED_DATA_LOC = "data/processed/crashes.pkl"
-COLLISION_DATA_LOC = "data/raw/Collisions.csv"
 # https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
-# downloaded November 2021
-
+# downloaded June 2022
+COLLISION_DATA_LOC = "data/raw/Collisions.csv"
+PROCESSED_DATA_LOC = "data/processed/crashes.pkl"
+NYC_WEST_LIMIT = -74.30  # west of Staten Island
+NYC_EAST_LIMIT = -73.70  # east of Queens / Lakeville Rd.
+NYC_SOUTH_LIMIT = 40.45  # south of Staten Island
+NYC_NORTH_LIMIT = 40.95  # north of the Bronx
 POLICE_PRECINCT_GEOMS_LOC = "data/raw/nyc_police_precincts_geoms.json"
 # https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz
 # downloaded November 2021
@@ -29,7 +31,9 @@ def index_nearest_shape(point, r_tree, shape_index_dict):
 
 
 # loading downloaded and locally-saved collision data
-crashes = pd.read_csv(COLLISION_DATA_LOC, dtype={"ZIP CODE": "object"})
+crashes = pd.read_csv(
+    COLLISION_DATA_LOC, dtype={"ZIP CODE": "object"}, low_memory=False
+)
 
 # renaming fields
 new_col_names = {
@@ -81,11 +85,6 @@ dt_fmt = "%m/%d/%Y %H:%M"
 crashes["datetime"] = crashes["DATE"] + " " + crashes["TIME"]
 crashes["datetime"] = crashes["datetime"].apply(lambda x: datetime.strptime(x, dt_fmt))
 
-# selecting time range
-start = datetime(year=2012, month=10, day=1)
-end = datetime(year=2021, month=10, day=1)
-crashes = crashes[crashes["datetime"].between(start, end, inclusive="left")].copy()
-
 # creating season field
 season_labels = ["Winter", "Spring", "Summer", "Fall", "Winter"]
 season_dates = ["1 Jan", "20 Mar", "20 Jun", "20 Sep", "20 Dec", "31 Dec"]
@@ -113,10 +112,6 @@ crashes["season"][is_leap_year] = pd.cut(
 )
 
 # creating  valid location coordinate flags
-NYC_WEST_LIMIT = -74.30  # west of Staten Island
-NYC_EAST_LIMIT = -73.70  # east of Queens / Lakeville Rd.
-NYC_SOUTH_LIMIT = 40.45  # south of Staten Island
-NYC_NORTH_LIMIT = 40.95  # north of the Bronx
 crashes["valid_lat_long"] = (
     crashes["LONG"].between(NYC_WEST_LIMIT, NYC_EAST_LIMIT)
 ) & (crashes["LAT"].between(NYC_SOUTH_LIMIT, NYC_NORTH_LIMIT))
@@ -138,7 +133,7 @@ crashes = gpd.GeoDataFrame(crashes, geometry=points)
 
 
 # assigning NYC police precinct to collision based on location
-with open(POLICE_PRECINCT_GEOMS_LOC) as fp:  # downloaded and locally-saved
+with open(POLICE_PRECINCT_GEOMS_LOC, encoding="utf-8") as fp:  # downloaded and locally-saved
     police_geojson = json.load(fp)
 precinct_geos = [shape(x["geometry"]) for x in police_geojson["features"]]
 precinct_nums = [x["properties"]["Precinct"] for x in police_geojson["features"]]
