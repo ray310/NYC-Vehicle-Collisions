@@ -11,5 +11,5 @@ Each year, vehicle collisions in New York City injure more than 40,000 people an
 To better understand where and when collisions occur we:
 - [Map where collisions occur]({{ "/content/maps" | relative_url }})
 - [Examine locations with high concentrations of collisions]({{ "/content/hotspots" | relative_url }})
-- [Review collisions trends over time]({{ "/content/trends" | relative_url }})
+- [Review collision trends over time]({{ "/content/trends" | relative_url }})
 - [Compare collisions by NYPD precinct]({{ "/content/police" | relative_url }})
