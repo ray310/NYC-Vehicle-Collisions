@@ -9,4 +9,4 @@ Dangerous areas are clusters of collisions with a high number of injuries and de
 
 _Note that this may take a few seconds to load._
 <iframe src="clusters_serious_map.html"></iframe>
-{% include map_data_range.html %}
+{% include map_data_range_full.html %}

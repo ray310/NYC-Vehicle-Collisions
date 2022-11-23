@@ -9,4 +9,4 @@ Dangerous areas for pedestrians and cyclists are clusters of collisions with a h
 
 _Note that this may take a few seconds to load._
 <iframe src="clusters_non_motor_map.html"></iframe>
-{% include map_data_range.html %}
+{% include map_data_range_full.html %}

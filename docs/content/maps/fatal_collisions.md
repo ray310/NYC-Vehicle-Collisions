@@ -8,4 +8,4 @@ hide_hero: true
 Click on icons for more information.
 
 <iframe src="fatal_map.html"></iframe>
-{% include map_data_range.html %}
+{% include map_data_range_full.html %}

@@ -8,4 +8,4 @@ hide_hero: true
 Single points with a high number of pedestrian / cyclist injuries and deaths from vehicle collisions.
 
 <iframe src="points_serious_map.html"></iframe>
-{% include map_data_range.html %}
+{% include map_data_range_full.html %}
