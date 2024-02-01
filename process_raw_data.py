@@ -8,7 +8,6 @@ from shapely.geometry import shape, Point
 from shapely.strtree import STRtree
 
 # https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
-# downloaded June 2022
 COLLISION_DATA_LOC = "data/raw/Collisions.csv"
 PROCESSED_DATA_LOC = "data/processed/crashes.pkl"
 NYC_WEST_LIMIT = -74.30  # west of Staten Island
