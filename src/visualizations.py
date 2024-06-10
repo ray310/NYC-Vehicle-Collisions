@@ -48,13 +48,15 @@ def make_grouped_bar_chart(
     minor_ticks_off=False,
     colors=None,
     bar_fontsize=16,
+    bar_padding=3,
+    legend=True,
     legend_fontsize=16,
     legend_bbox=(1.1, 0.9),
     legend_labelspacing=0.7,
     legend_handleheight=1.5,
     bar_label_bbox=None,
 ):
-    """Makes a grouped bar chart from a pd.DataFrame where the DataFrame index
+    """Makes a grouped vertical bar chart from a pd.DataFrame where the DataFrame index
     represents the groupings and columns represent the individual bar heights"""
     with plt.style.context(style):
         # bar and bar group sizes
@@ -98,44 +100,93 @@ def make_grouped_bar_chart(
         # bars and bar labels
         if colors:
             ax.set_prop_cycle("color", colors)  # color_cycle
-        bar_labels = []
+        bars = []
         for i in range(len(df.columns)):
             col_name = df.columns[i]
             offset = (bar_width * i) - (bar_width / 2)
             x = [offset + (bar_group_width * j) for j in range(len(df.index))]
             y = df[col_name].values
-            bar_labels.append(ax.bar(x, height=y, width=bar_width, label=col_name))
+            bars.append(ax.bar(x, height=y, width=bar_width, label=col_name))
 
-        for bl in bar_labels:
+        for bar in bars:
             if bar_label_bbox is None:
                 bar_label_bbox = {"facecolor": "none", "edgecolor": "none"}
             ax.bar_label(
-                bl,
-                labels=[f"{val:,.0f}" for val in bl.datavalues],
+                bar,
+                labels=[f"{val:,.0f}" for val in bar.datavalues],
                 fontsize=bar_fontsize,
-                padding=3,
+                padding=bar_padding,
                 bbox=bar_label_bbox,
             )
 
         # legend
-        legend_args = {
-            "fontsize": legend_fontsize,
-            "framealpha": 0.0,
-            "bbox_to_anchor": legend_bbox,
-            "labelspacing": legend_labelspacing,
-            "handleheight": legend_handleheight,
-        }
-        if legend_labels:  # manually labeling legend is sensitive to order
-            fig.legend(labels=legend_labels, **legend_args)
-        else:
-            fig.legend(**legend_args)
+        if legend:
+            legend_args = {
+                "fontsize": legend_fontsize,
+                "framealpha": 0.0,
+                "bbox_to_anchor": legend_bbox,
+                "labelspacing": legend_labelspacing,
+                "handleheight": legend_handleheight,
+            }
+            if legend_labels:  # manually labeling legend is sensitive to order
+                fig.legend(labels=legend_labels, **legend_args)
+            else:
+                fig.legend(**legend_args)
     if save:
         plt.savefig(save, bbox_inches="tight")
     plt.show()
 
 
+def make_horizontal_bar_chart(
+    bar_labels,
+    bar_values,
+    title="",
+    x_label="",
+    style="default",
+    save="",
+    fig_size=(18, 10),
+    title_fontsize=32,
+    label_fontsize=22,
+    major_tick_fontsize=20,
+    reverse=False,
+):
+    """Makes a horizontal bar chart from input bar labels and respective values"""
+    with plt.style.context(style):
+        # figure, title, and axis labels
+        fig, ax = plt.subplots()
+        fig.set_size_inches(fig_size)  # width, height
+        ax.set_title(title, fontsize=title_fontsize, pad=30)
+        ax.set_xlabel(x_label, fontsize=label_fontsize, labelpad=10)
+
+        # horizontal bars
+        y = list(range(len(bar_values)))
+        if reverse:
+            y.reverse()
+        bars = ax.barh(y, bar_values)
+        ax.set_yticks(y, bar_labels, va="center")
+
+        # tick labels and size
+        ax.bar_label(bars, padding=5, fontsize=20)
+        ax.tick_params(which="major", labelsize=major_tick_fontsize)
+
+    if save:
+        plt.savefig(save, bbox_inches="tight")
+    plt.show()
+
+
+def format_cbar_default(tick):
+    """Default string formatting for numerical color bar ticks"""
+    return f"{tick:.2f}"
+
+
 def make_heat_map(
-    pd_ct, labels, colors=None, interpolation=None, min_max=None, save=""
+    pd_ct,
+    labels,
+    colors=None,
+    interpolation=None,
+    min_max=None,
+    save="",
+    cbar_format=format_cbar_default,
 ):
     """Makes a 2D heatmap from a pd.crosstab.
     - labels are a dictionary with the following keys:
@@ -180,7 +231,11 @@ def make_heat_map(
         step = (max_val - min_val) / default_graduations
 
     im = ax.imshow(
-        pd_ct, cmap=color_map, interpolation=interpolation, vmin=min_val, vmax=max_val,
+        pd_ct,
+        cmap=color_map,
+        interpolation=interpolation,
+        vmin=min_val,
+        vmax=max_val,
     )
 
     # colorbar
@@ -192,7 +247,7 @@ def make_heat_map(
         pad=0.1,
     )  # aspect is ratio of x to y
     cbar.ax.set_xlabel(labels["cbar_label"], rotation=0, fontsize=16)
-    cbar.ax.set_xticklabels([f"{tick:.2f}" for tick in cbar.get_ticks()])
+    cbar.ax.set_xticklabels([cbar_format(tick) for tick in cbar.get_ticks()])
     cbar.ax.tick_params(labelsize=14)
 
     # gridlines
@@ -256,15 +311,15 @@ def add_choropleth(
         info_layer = folium.GeoJson(data=gdf, style_function=style)
         info_layer.add_to(choro_map)
 
-    if tooltip_cols:
-        tooltip = folium.features.GeoJsonTooltip(
-            fields=tooltip_cols, aliases=tooltip_aliases, localize=True
-        )
-        tooltip.add_to(info_layer)
+        if tooltip_cols:
+            tooltip = folium.features.GeoJsonTooltip(
+                fields=tooltip_cols, aliases=tooltip_aliases, localize=True
+            )
+            tooltip.add_to(info_layer)
 
-    if popup_cols:
-        popup = folium.features.GeoJsonPopup(
-            fields=popup_cols, aliases=popup_aliases, localize=True
-        )
-        popup.add_to(info_layer)
+        if popup_cols:
+            popup = folium.features.GeoJsonPopup(
+                fields=popup_cols, aliases=popup_aliases, localize=True
+            )
+            popup.add_to(info_layer)
     folium.plugins.Fullscreen().add_to(choro_map)

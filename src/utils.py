@@ -1,12 +1,9 @@
 """Project helper functions."""
 
 import pandas as pd
-from .constants import DAY_OF_WEEK_MAP
 
 
-def make_week_crosstab(
-    df, divisor, day_of_week_map=DAY_OF_WEEK_MAP.copy(), values=None, aggfunc=None
-):
+def make_week_crosstab(df, divisor, values=None, aggfunc=None, day_of_week_map=None):
     """Returns an hour / day-of-week crosstab scaled by a divisor."""
     ct = pd.crosstab(
         index=df["datetime"].dt.dayofweek,
@@ -15,7 +12,7 @@ def make_week_crosstab(
         aggfunc=aggfunc,
     )
     if day_of_week_map:
-        ct.rename(index=day_of_week_map)
+        ct.rename(index=day_of_week_map, inplace=True)
     ct /= divisor  # scale crosstab by divisor
     return ct
 
