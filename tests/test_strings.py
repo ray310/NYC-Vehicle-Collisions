@@ -1,5 +1,6 @@
 """Tests for strings utility functions."""
 
+import pandas as pd
 import src.strings
 
 
@@ -67,19 +68,34 @@ def test_get_space_indices_empty_string():
 
 
 def test_get_space_indices_not_string():
-    """Empty inputs should return None"""
+    """Non-string inputs should return None"""
     values = [[], (), {}, None, 7, 7.1, ["strings"]]
     for val in values:
         assert src.strings.get_space_indices(val) is None
 
 
-def test_add_line_breaks():
-    """Array should array"""
+def test_add_line_breaks_list():
+    """List of strings should list of strings with correct line breaks added"""
     input_arr = [
         "abcd ef ghijk",
         "abcdefgh",
         "abcdef g hijklm"
     ]
+    output_arr = [
+        "abcd ef\nghijk",
+        "abcdefgh",
+        "abcdef g\nhijklm"
+    ]
+    assert src.strings.add_line_breaks(input_arr) == output_arr
+
+
+def test_add_line_breaks_pd_series():
+    """Pd.Series of strings should list of strings with correct line breaks added"""
+    input_arr = pd.Series([
+        "abcd ef ghijk",
+        "abcdefgh",
+        "abcdef g hijklm"
+    ])
     output_arr = [
         "abcd ef\nghijk",
         "abcdefgh",
