@@ -1,4 +1,4 @@
-""" Script to process raw data into analysis-ready dataset"""
+""" Script to process raw collision data into analysis-ready dataset"""
 
 import json
 from datetime import datetime
@@ -14,19 +14,18 @@ NYC_WEST_LIMIT = -74.30  # west of Staten Island
 NYC_EAST_LIMIT = -73.70  # east of Queens / Lakeville Rd.
 NYC_SOUTH_LIMIT = 40.45  # south of Staten Island
 NYC_NORTH_LIMIT = 40.95  # north of the Bronx
-POLICE_PRECINCT_GEOMS_LOC = "data/raw/nyc_police_precincts_geoms.json"
+POLICE_PRECINCT_GEOMS_LOC = "data/raw/nyc_police_precincts_geoms.geojson"
 # https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz
-# downloaded November 2021
+# downloaded June 2024
 
 
-def index_nearest_shape(point, r_tree, shape_index_dict):
-    """Returns the index of the nearest Shapely shape to a Shapely point.
-    Uses a Shapely STRtree (R-tree) to perform a faster lookup"""
-    result = None
-    if point.is_valid:  # Point(nan, nan) is not valid (also not empty) in 1.8
-        geom = r_tree.nearest(point)
-        result = shape_index_dict[id(geom)]
-    return result
+def id_nearest_shape(point, r_tree, shape_names):
+    """Returns the name (from list of shape_names) of the nearest Shapely shape to
+    input Shapely point. Uses a Shapely STRtree (R-tree) to perform a faster lookup"""
+    name = None
+    if point.is_valid:
+        name = shape_names[r_tree.nearest(point)]
+    return name
 
 
 # loading downloaded and locally-saved collision data
@@ -102,7 +101,7 @@ crashes["season"] = pd.cut(
 
 # seasons accounting for leap years
 is_leap_year = crashes["datetime"].dt.is_leap_year
-crashes["season"][is_leap_year] = pd.cut(
+crashes.loc[is_leap_year, "season"] = pd.cut(
     crashes["datetime"][is_leap_year].dt.dayofyear,
     bins=leap_year_bins,
     labels=season_labels,
@@ -132,15 +131,16 @@ crashes = gpd.GeoDataFrame(crashes, geometry=points)
 
 
 # assigning NYC police precinct to collision based on location
-with open(POLICE_PRECINCT_GEOMS_LOC, encoding="utf-8") as fp:  # downloaded and locally-saved
+with open(
+    POLICE_PRECINCT_GEOMS_LOC, encoding="utf-8"
+) as fp:  # downloaded and locally-saved
     police_geojson = json.load(fp)
 precinct_geos = [shape(x["geometry"]) for x in police_geojson["features"]]
-precinct_nums = [x["properties"]["Precinct"] for x in police_geojson["features"]]
-precincts = {id(x[0]): x[1] for x in zip(precinct_geos, precinct_nums)}
+precinct_nums = [x["properties"]["precinct"] for x in police_geojson["features"]]
 precinct_tree = STRtree(precinct_geos)
 crashes.loc[crashes["valid_lat_long"], "precinct"] = crashes.apply(
-    lambda x: index_nearest_shape(x.geometry, precinct_tree, precincts), axis=1
-)  # long run time, Shapely 1.8 STRtree implementation may not be optimal
+    lambda x: id_nearest_shape(x.geometry, precinct_tree, precinct_nums), axis=1
+)
 
 # save processed data
 crashes.to_pickle(PROCESSED_DATA_LOC)
