@@ -1,5 +1,8 @@
 """Project helper functions."""
 
+import bisect
+import calendar
+import datetime
 import pandas as pd
 
 
@@ -28,3 +31,20 @@ def make_heatmap_labels(
         "cbar_label": cbar_label,
     }
     return ct_labels
+
+
+def date_to_season(dt: datetime.datetime):
+    """Converts individual datetime or pd.Timestamp to season of year"""
+    # day of year corresponding to following dates:
+    # 1-Jan, 21-Mar, 21-Jun, 21-Sep, 21-Dec, 31-Dec
+    # day of year can be obtained using datetime_obj.timetuple().tm_yday
+    # 21-March is considered first day of Spring, etc.
+    SEASON_BINS = (1, 80, 172, 264, 355, 365)
+    LEAP_YEAR_SEASON_BINS = (1, 81, 173, 265, 356, 366)
+    SEASON_LABELS = ("Winter", "Spring", "Summer", "Fall", "Winter")
+
+    season_bins = SEASON_BINS
+    if calendar.isleap(dt.year):
+        season_bins = LEAP_YEAR_SEASON_BINS
+    idx = (bisect.bisect(season_bins, dt.timetuple().tm_yday) - 1) % len(SEASON_LABELS)
+    return SEASON_LABELS[idx]
