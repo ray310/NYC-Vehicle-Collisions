@@ -41,7 +41,7 @@ def make_grouped_bar_chart(
     title_fontsize=32,
     label_fontsize=22,
     ylabel_rotation="horizontal",
-    ylabel_pad=60,
+    ylabel_pad=30,
     logscale=False,
     major_tick_fontsize=20,
     minor_tick_fontsize=14,
@@ -168,6 +168,117 @@ def make_horizontal_bar_chart(
         # tick labels and size
         ax.bar_label(bars, padding=5, fontsize=20)
         ax.tick_params(which="major", labelsize=major_tick_fontsize)
+
+    if save:
+        plt.savefig(save, bbox_inches="tight")
+    plt.show()
+
+
+def make_line_chart(
+    list_x_y_tuples,
+    style="default",
+    fig_size=(18, 10),
+    title="",
+    title_fontsize=32,
+    y_label="",
+    label_fontsize=22,
+    ylabel_rotation="horizontal",
+    ylabel_pad=60,
+    x_label="",
+    logscale=False,
+    y_lim=None,
+    yaxis_digits=0,
+    set_major_tick_x=None,
+    tick_fontsize=20,
+    colors=None,
+    markerstyle="o",
+    markersize=10,
+    linewidth=5,
+    annotate=False,
+    annotate_digits=1,
+    vert_offset=15,
+    annotate_fontsize=14,
+    annotate_bbox=None,
+    legend_labels=None,
+    legend_fontsize=16,
+    legend_bbox=(1.1, 0.9),
+    legend_labelspacing=0.7,
+    legend_handleheight=1.5,
+    text=None,
+    text_fontsize=16,
+    text_fontstyle="normal",
+    save="",
+):
+    """Makes a line chart"""
+    with plt.style.context(style):
+        # figure, title, and axis labels
+        fig, ax = plt.subplots()
+        fig.set_size_inches(fig_size)  # width, height
+        ax.set_title(title, fontsize=title_fontsize, pad=30)
+        ax.set_ylabel(
+            y_label,
+            fontsize=label_fontsize,
+            rotation=ylabel_rotation,
+            labelpad=ylabel_pad,
+        )
+        ax.set_xlabel(x_label, fontsize=label_fontsize, labelpad=10)
+
+        # axes parameters and colors
+        ax.tick_params(which="both", labelsize=tick_fontsize)
+        if logscale:
+            ax.set_yscale("log")
+        if y_lim:
+            ax.set_ylim(ymin=y_lim[0], ymax=y_lim[1])
+        ax.yaxis.set_major_formatter(f"{{x:,.{yaxis_digits}f}}")
+        if set_major_tick_x:
+            ax.xaxis.set_major_locator(set_major_tick_x)
+        if colors:
+            ax.set_prop_cycle("color", colors)  # color_cycle
+
+        # plot lines
+        for tup in list_x_y_tuples:
+            x_arr, y_arr = tup
+            ax.plot(
+                x_arr,
+                y_arr,
+                marker=markerstyle,
+                markersize=markersize,
+                linewidth=linewidth,
+            )
+            if annotate:
+                for x, y in zip(x_arr, y_arr):
+                    ax.annotate(
+                        f"{y:,.{annotate_digits}f}",
+                        xy=(x, y),
+                        xytext=(0, vert_offset),
+                        textcoords="offset pixels",
+                        fontsize=annotate_fontsize,
+                        ha="center",
+                        bbox=annotate_bbox,
+                    )  # xytext represents offset
+
+        # legend
+        if legend_labels:
+            legend_args = {
+                "fontsize": legend_fontsize,
+                "framealpha": 0.0,
+                "bbox_to_anchor": legend_bbox,
+                "labelspacing": legend_labelspacing,
+                "handleheight": legend_handleheight,
+            }
+            fig.legend(
+                labels=legend_labels, **legend_args
+            )  # manually labeling legend is sensitive to order
+
+        if text:
+            ax.text(
+                text[0],
+                text[1],
+                text[2],
+                transform=ax.transAxes,
+                fontsize=text_fontsize,
+                fontstyle=text_fontstyle,
+            )
 
     if save:
         plt.savefig(save, bbox_inches="tight")
