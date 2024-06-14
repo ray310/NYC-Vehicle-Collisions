@@ -25,9 +25,10 @@ MONTHS_MAP = {
     12: "Dec",
 }
 
-SEASONS = ("Winter", "Spring", "Summer", "Fall")
-
-NYC_WEST_LIMIT = -74.30  # west of Staten Island
+NYC_MAP_CENTER = (40.73, -73.92)
+NYC_NORTH_LIMIT = 40.95  # north of the Bronx
 NYC_EAST_LIMIT = -73.70  # east of Queens / Lakeville Rd.
 NYC_SOUTH_LIMIT = 40.45  # south of Staten Island
-NYC_NORTH_LIMIT = 40.95  # north of the Bronx
+NYC_WEST_LIMIT = -74.30  # west of Staten Island
+
+SEASONS = ("Winter", "Spring", "Summer", "Fall")

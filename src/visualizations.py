@@ -2,10 +2,13 @@
 
 import folium
 import folium.plugins
+import geopandas as gpd
 import numpy as np
 import matplotlib as mpl
+import pandas as pd
 from matplotlib.colors import ListedColormap
 import matplotlib.pyplot as plt
+from src.constants import NYC_MAP_CENTER
 
 
 HEATMAP_COLORS = [
@@ -55,6 +58,7 @@ def make_grouped_bar_chart(
     legend_labelspacing=0.7,
     legend_handleheight=1.5,
     bar_label_bbox=None,
+    bar_digits=0,
 ):
     """Makes a grouped vertical bar chart from a pd.DataFrame where the DataFrame index
     represents the groupings and columns represent the individual bar heights"""
@@ -113,7 +117,7 @@ def make_grouped_bar_chart(
                 bar_label_bbox = {"facecolor": "none", "edgecolor": "none"}
             ax.bar_label(
                 bar,
-                labels=[f"{val:,.0f}" for val in bar.datavalues],
+                labels=[f"{val:,.{bar_digits}f}" for val in bar.datavalues],
                 fontsize=bar_fontsize,
                 padding=bar_padding,
                 bbox=bar_label_bbox,
@@ -383,6 +387,58 @@ def make_heat_map(
     if save:
         plt.savefig(save, bbox_inches="tight")
     plt.show()
+
+
+def make_marker_map(map_data: pd.DataFrame, text_fmt: str, map_center=NYC_MAP_CENTER):
+    """Returns a prepared Folium map"""
+    fmap = folium.Map(location=map_center, zoom_start=10, tiles="OpenStreetMap")
+    js_callback = (
+        "function (row) {"
+        "var marker = L.marker(new L.LatLng(row[0], row[1]));"
+        "var icon = L.AwesomeMarkers.icon({"
+        "icon: 'fa-exclamation',"
+        "iconColor: 'white',"
+        "markerColor: 'red',"
+        "prefix: 'fa',"
+        "});"
+        "marker.setIcon(icon);"
+        "var popup = L.popup({maxWidth: '300'});"
+        "const display_text = {text:"
+        + text_fmt
+        + "var poptext = $(`<div id='mytext' style='width: 100.0%; height: 100.0%;'> ${display_text.text}</div>`)[0];"
+        "popup.setContent(poptext);"
+        "marker.bindPopup(popup);"
+        "return marker};"
+    )
+    folium.plugins.FastMarkerCluster(data=map_data, callback=js_callback).add_to(fmap)
+    return fmap
+
+
+def prep_choropleth_df(
+    df,
+    mask,
+    groupby_col,
+    agg_col,
+    geoseries,
+    divisor=1,
+    agg_metrics="count",
+    round_agg_values=False,
+    round_decimal=2,
+):
+    """Returns a gpd.GeoDataFrame prepared for a Folium Choropleth.
+    gpd.GeoDataFrame contains a column for index values, a column for an aggregated value,
+    and a column for the associated geometry"""
+    groupby_df = df[mask].groupby(by=groupby_col)[agg_col].agg(agg_metrics).to_frame()
+    groupby_df[agg_col] /= divisor
+    if round_agg_values:
+        groupby_df[agg_col] = groupby_df[agg_col].round(decimals=round_decimal)
+        if round_decimal == 0:
+            groupby_df[agg_col] = groupby_df[agg_col].astype(int)
+    groupby_df.index = groupby_df.index.astype(int)
+    groupby_df[groupby_df.index.name] = (
+        groupby_df.index
+    )  # need 2 columns for Folium Choropleth
+    return gpd.GeoDataFrame(groupby_df, geometry=geoseries)
 
 
 def add_choropleth(
