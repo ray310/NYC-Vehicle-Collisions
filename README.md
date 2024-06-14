@@ -27,12 +27,15 @@ https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9g
 
 NYPD Precinct Shapefiles <br>
 https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz
+
+MTA Bridge and Tunnel Toll Data <br>
+https://data.ny.gov/Transportation/Hourly-Traffic-on-Metropolitan-Transportation-Auth/qzve-kjga/about_data
 <br><br>
 
 ### Reproducing Processed Data and Analysis
 1) Download and save data to local directory, e.g. `/data/raw`
 2) Create and activate project virtual environment 
-   - Python 3.9.12 is used
+   - Python 3.12.3 is used
    - Virtual environment can be created from either
    `conda_environment.yaml` or `requirements.txt`
 3) Update data input and output parameters in `process_raw_data.py` as appropriate
