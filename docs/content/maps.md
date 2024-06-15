@@ -14,4 +14,3 @@ hide_hero: true
 - [Collisions with Pedestrians & Cyclists 2018 - 2019]({{ "/content/maps/non_motor_collisions_18_19" | relative_url }})
 
 _Serious collisions are collisions that result in injury or death._
-
