@@ -6,10 +6,10 @@ hide_hero: true
 ---
 # Analysis of New York City Vehicle Collisions
 
-Each year, vehicle collisions in New York City injure more than 40,000 people and kill more than 200 people. Understanding where, when, and why collisions occur is essential to reducing the number of people injured and killed. 
+Each year, vehicle collisions in New York City injure approximately 40,000 people and kill more than 200 people. Understanding where, when, and why collisions occur is essential to reducing the number of people injured and killed. 
 
 To better understand where and when collisions occur we:
 - [Map where collisions occur]({{ "/content/maps" | relative_url }})
-- [Examine locations with high concentrations of collisions]({{ "/content/hotspots" | relative_url }})
-- [Review collision trends over time]({{ "/content/trends" | relative_url }})
+- [Identify hot spots]({{ "/content/hotspots" | relative_url }})
+- [Review trends]({{ "/content/trends" | relative_url }})
 - [Compare collisions by NYPD precinct]({{ "/content/police" | relative_url }})

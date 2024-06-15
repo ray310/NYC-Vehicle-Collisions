@@ -18,3 +18,8 @@ hide_footer: true
 ##### New York City Police Department (NYPD) Precinct Shapefiles
 
 [https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz]({{ "https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz" | absolute_url }})
+
+<br>
+##### MTA Bridge and Tunnel Toll Data
+
+[https://data.ny.gov/Transportation/Hourly-Traffic-on-Metropolitan-Transportation-Auth/qzve-kjga/about_data]({{ "https://data.ny.gov/Transportation/Hourly-Traffic-on-Metropolitan-Transportation-Auth/qzve-kjga/about_data" | absolute_url }})

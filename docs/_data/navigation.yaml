@@ -32,12 +32,12 @@
   dropdown:
     - name: Yearly
       link: /content/trends/yearly
+    - name: Seasonal
+      link: /content/trends/seasonal
     - name: Monthly
       link: /content/trends/monthly
     - name: Weekly
       link: /content/trends/weekly
-    - name: Hourly
-      link: /content/trends/hourly
 - name: Collisions by Police Precinct
   link: /content/police
   dropdown:

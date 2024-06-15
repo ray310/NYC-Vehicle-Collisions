@@ -6,6 +6,7 @@ hide_hero: true
 ---
 # Trends in Vehicle Collisions
 - [Yearly]({{ "/content/trends/yearly" | relative_url }})
+- [Seasonal]({{ "/content/trends/seasonal" | relative_url }})
 - [Monthly]({{ "/content/trends/monthly" | relative_url }})
 - [Weekly]({{ "/content/trends/weekly" | relative_url }})
-- [Hourly]({{ "/content/trends/hourly" | relative_url }})
+

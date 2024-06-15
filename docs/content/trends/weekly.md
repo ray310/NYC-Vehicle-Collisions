@@ -5,32 +5,24 @@ description: Weekly vehicle collisions patterns with 2D-heatmaps (day-of-week, t
 hide_hero: true
 ---
 # Weekly Patterns
-Serious collisions are collisions that result in injury or death.
-
-<hr class="hr">
-### Collisions are most common during weekday 'rush-hours'
-<img src="images/all_collisions_heat.png">
-
-<hr class="hr">
-### Serious collisions are also most common during weekday 'rush-hours'
-__However serious collisions appear more prevalent in the afternoon and evening than in the morning__
-
-<img src="images/serious_heat.png">
-
-<hr class="hr">
-### Collisions with pedestrians and cyclists are concentrated in the afternoon and evening
-
-<img src="images/non_motor_heat.png">
-
-<hr class="hr">
-### Fatal collisions have a significantly different pattern
-- Fatal collisions are most common Saturday and Sunday from 3am to 5am
-- Fatal collisions are elevated Friday and Saturday in the late afternoon / evening
-
-<img src="images/fatal_heat.png">
+_Serious collisions are collisions that result in injury or death_
 
 <hr class="hr">
 ### Collisions increase from Sunday to Friday
+___100+ people are injured on most days___
+
 <img src="images/weekly.png">
+
+<hr class="hr">
+### Fatal collisions are most common Saturday and Sunday from 3am to 5am
+<img src="images/fatal_heat.png">
+
+<hr class="hr">
+### Serious collisions are most common during evening 'rush-hours'
+<img src="images/serious_heat.png">
+
+<hr class="hr">
+### Collisions with pedestrians and cyclists have a similar pattern to serious collisions
+<img src="images/non_motor_heat.png">
 
 {% include analysis_data_range.html %}
