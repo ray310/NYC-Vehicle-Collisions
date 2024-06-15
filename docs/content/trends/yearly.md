@@ -5,13 +5,13 @@ description: Annual vehicle collisions, collision injuries and deaths, and colli
 hide_hero: true
 ---
 # Annual Collisions
-<hr class="hr">
 
-### Collisions have been trending upwards since dropping in 2020
+<hr class="hr">
+#### Collisions have been trending upwards since dropping in 2020
 <img src="images/yearly_collisions.png">
 
 <hr class="hr">
-# Annual Injuries and Deaths
+#### Annual Injuries and Deaths
 
 <img src="images/yearly_injuries_deaths.png">
 

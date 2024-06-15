@@ -8,7 +8,7 @@ hide_hero: true
 _Serious collisions are collisions that result in injury or death_
 
 <hr class="hr">
-### Serious collisions peak in summer but collisions with pedestrians and cyclists peak in the fall
+#### Serious collisions peak in summer but collisions with pedestrians and cyclists peak in the fall
 
 <img src="images/seasonal.png">
 
