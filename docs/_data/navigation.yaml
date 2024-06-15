@@ -3,18 +3,19 @@
   dropdown:
     - name: Fatal Collisions
       link: /content/maps/fatal_collisions
-    - name: Pedestrian / Cyclist Collisions 2020 - 2022
-      link: /content/maps/non_motor_collisions_20_23
-    - name: Pedestrian / Cyclist Collisions 2016 - 2019
-      link: /content/maps/non_motor_collisions_16_19
-    - name: Pedestrian / Cyclist Collisions 2012 - 2015
-      link: /content/maps/non_motor_collisions_12_15
-    - name: Serious Collisions 2020 - 2022
-      link: /content/maps/serious_collisions_20_23
-    - name: Serious Collisions 2016 - 2019
-      link: /content/maps/serious_collisions_16_19
-    - name: Serious Collisions 2012 - 2015
-      link: /content/maps/serious_collisions_12_15
+    - name: Serious Collisions 2022 - 2023
+      link: /content/maps/serious_collisions_22_23
+    - name: Serious Collisions 2020 - 2021
+      link: /content/maps/serious_collisions_20_21
+    - name: Serious Collisions 2018 - 2019
+      link: /content/maps/serious_collisions_18_19
+    - name: Pedestrian / Cyclist Collisions 2022 - 2023
+      link: /content/maps/non_motor_collisions_22_23
+    - name: Pedestrian / Cyclist Collisions 2020 - 2021
+      link: /content/maps/non_motor_collisions_20_21
+    - name: Pedestrian / Cyclist Collisions 2018 - 2019
+      link: /content/maps/non_motor_collisions_18_19
+
 - name: Hot Spots
   link: /content/hotspots
   dropdown:
