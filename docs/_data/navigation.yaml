@@ -43,7 +43,7 @@
   dropdown:
     - name: Fatal Collisions
       link: /content/police/precinct_fatal
-    - name: Pedestrian / Cyclist Collisions
-      link: /content/police/precinct_non_motor
     - name: Serious Collisions
       link: /content/police/precinct_serious
+    - name: Pedestrian / Cyclist Collisions
+      link: /content/police/precinct_non_motor
