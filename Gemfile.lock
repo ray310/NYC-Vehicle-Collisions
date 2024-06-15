@@ -86,6 +86,7 @@ PLATFORMS
 DEPENDENCIES
   bulma-clean-theme (= 1.0.0)
   jekyll (~> 4.3)
+  jekyll-sitemap
   webrick
 
 BUNDLED WITH

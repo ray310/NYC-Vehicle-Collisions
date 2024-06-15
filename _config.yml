@@ -3,3 +3,5 @@ theme: bulma-clean-theme
 fixed_navbar: top
 footer_menu: footer_links
 google_analytics: G-RF9V1J2QG0
+plugins:
+  - jekyll-sitemap
