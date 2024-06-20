@@ -20,6 +20,25 @@ def make_week_crosstab(df, divisor, values=None, aggfunc=None, day_of_week_map=N
     return ct
 
 
+def get_crosstab_min_max(df, col, categories, divisor=None):
+    """Returns the absolute min and absolute max values of weekly crosstabs across
+    all categories. Used to ensure that different heatmaps have the same scale."""
+    max_val = float("-inf")
+    min_val = float("inf")
+    for cat in categories:
+        is_true = df[col].isin([cat])
+        idx = df.loc[is_true, "datetime"].dt.dayofweek
+        cols = df.loc[is_true, "datetime"].dt.hour
+        ct = pd.crosstab(index=idx, columns=cols)
+
+        min_val = min(min_val, min(ct.min()))  # ct.min() returns pd.Series
+        max_val = max(max_val, max(ct.max()))
+    if divisor:
+        min_val /= divisor
+        max_val /= divisor
+    return min_val, max_val
+
+
 def make_heatmap_labels(
     title, x_label="Hour of Day", y_label="", cbar_label="Number of Collisions per Hour"
 ):
