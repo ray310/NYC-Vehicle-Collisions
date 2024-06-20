@@ -20,16 +20,22 @@ def make_week_crosstab(df, divisor, values=None, aggfunc=None, day_of_week_map=N
     return ct
 
 
-def get_crosstab_min_max(df, col, categories, divisor=None):
+def get_crosstab_min_max(
+    df, col, categories, divisor=None, values_col=None, aggfunc=None
+):
     """Returns the absolute min and absolute max values of weekly crosstabs across
-    all categories. Used to ensure that different heatmaps have the same scale."""
+    all categories. Categories should be an iterable and not a tuple containing a
+    single string. Used to ensure that different heatmaps have the same scale."""
     max_val = float("-inf")
     min_val = float("inf")
     for cat in categories:
         is_true = df[col].isin([cat])
         idx = df.loc[is_true, "datetime"].dt.dayofweek
         cols = df.loc[is_true, "datetime"].dt.hour
-        ct = pd.crosstab(index=idx, columns=cols)
+        values = None
+        if aggfunc:
+            values = df.loc[is_true, values_col]
+        ct = pd.crosstab(index=idx, columns=cols, values=values, aggfunc=aggfunc)
 
         min_val = min(min_val, min(ct.min()))  # ct.min() returns pd.Series
         max_val = max(max_val, max(ct.max()))
