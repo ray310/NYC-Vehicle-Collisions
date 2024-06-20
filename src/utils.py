@@ -3,7 +3,12 @@
 import bisect
 import calendar
 import datetime
+import json
+import geopandas as gpd
 import pandas as pd
+import shapely
+from shapely.geometry import shape
+from shapely.strtree import STRtree
 
 
 def make_week_crosstab(df, divisor, values=None, aggfunc=None, day_of_week_map=None):
@@ -73,3 +78,31 @@ def date_to_season(dt: datetime.datetime):
         season_bins = LEAP_YEAR_SEASON_BINS
     idx = (bisect.bisect(season_bins, dt.timetuple().tm_yday) - 1) % len(SEASON_LABELS)
     return SEASON_LABELS[idx]
+
+
+def id_nearest_shape(point: shapely.Point, r_tree: shapely.STRtree, shape_names):
+    """Returns the name (from list of shape_names) of the nearest Shapely shape to
+    input Shapely point. Uses a Shapely STRtree (R-tree) to perform a faster lookup"""
+    name = None
+    if point.is_valid:
+        name = shape_names[r_tree.nearest(point)]
+    return name
+
+
+def add_location_feature(
+    gdf: gpd.GeoDataFrame, shape_file_loc, property_name, feature_name=None
+):
+    """Returns a GeoPandas.Dataframe containing added location feature based on
+    lat-long lookup. Takes GeoPandas.Dataframe with point geometries, location
+    of shape file for point lookup, property_name, and optionally feature_name"""
+    with open(shape_file_loc, encoding="utf-8") as fp:  # downloaded and locally-saved
+        geojson = json.load(fp)
+    geos = [shape(x["geometry"]) for x in geojson["features"]]
+    geo_id = [x["properties"][property_name] for x in geojson["features"]]
+    tree = STRtree(geos)
+    if not feature_name:
+        feature_name = property_name
+    gdf.loc[gdf["valid_lat_long"], feature_name] = gdf.apply(
+        lambda x: id_nearest_shape(x.geometry, tree, geo_id), axis=1
+    )
+    return gdf

@@ -1,11 +1,11 @@
 """Module to process raw collision data into analysis-ready dataset"""
 
-import json
 from datetime import datetime
+
 import pandas as pd
 import geopandas as gpd
-from shapely.geometry import shape, Point
-from shapely.strtree import STRtree
+from shapely.geometry import Point
+
 import src.utils
 from src.constants import (
     NYC_WEST_LIMIT,
@@ -18,17 +18,9 @@ from src.constants import (
 COLLISION_DATA_LOC = "data/raw/Collisions.csv"
 PROCESSED_DATA_LOC = "data/processed/crashes.pkl"
 POLICE_PRECINCT_GEOMS_LOC = "data/raw/nyc_police_precincts_geoms.geojson"
+DISTRICT_GEO_LOC = "data/raw/City Council Districts.geojson"
 # https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz
 # downloaded June 2024
-
-
-def id_nearest_shape(point, r_tree, shape_names):
-    """Returns the name (from list of shape_names) of the nearest Shapely shape to
-    input Shapely point. Uses a Shapely STRtree (R-tree) to perform a faster lookup"""
-    name = None
-    if point.is_valid:
-        name = shape_names[r_tree.nearest(point)]
-    return name
 
 
 def process_data():
@@ -110,17 +102,11 @@ def process_data():
     # creating GeoDataFrame with Shapely Point corresponding to lat-long coordinates
     points = [Point(x, y) for x, y in zip(crashes["LONG"].array, crashes["LAT"].array)]
     crashes = gpd.GeoDataFrame(crashes, geometry=points)
-
-    # assigning NYC police precinct to collision based on location
-    with open(
-        POLICE_PRECINCT_GEOMS_LOC, encoding="utf-8"
-    ) as fp:  # downloaded and locally-saved
-        police_geojson = json.load(fp)
-    precinct_geos = [shape(x["geometry"]) for x in police_geojson["features"]]
-    precinct_nums = [x["properties"]["precinct"] for x in police_geojson["features"]]
-    precinct_tree = STRtree(precinct_geos)
-    crashes.loc[crashes["valid_lat_long"], "precinct"] = crashes.apply(
-        lambda x: id_nearest_shape(x.geometry, precinct_tree, precinct_nums), axis=1
+    crashes = src.utils.add_location_feature(
+        crashes, POLICE_PRECINCT_GEOMS_LOC, "precinct"
+    )
+    crashes = src.utils.add_location_feature(
+        crashes, DISTRICT_GEO_LOC, "coun_dist", feature_name="district"
     )
 
     # save processed data
