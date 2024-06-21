@@ -1,5 +1,7 @@
 """ Project constants, parameters, and settings."""
 
+COORD_REF_SYSTEM = "EPSG:4326"
+
 DAY_OF_WEEK_MAP = {
     0: "Monday",
     1: "Tuesday",
