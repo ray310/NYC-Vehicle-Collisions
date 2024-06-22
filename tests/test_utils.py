@@ -6,7 +6,7 @@ import src.utils
 
 
 def test_date_to_season():
-    """ Function should work for both datetime and pd.Timestamp objects"""
+    """Function should work for both datetime and pd.Timestamp objects."""
     test_cases = {
         datetime(year=1900, month=1, day=1): "Winter",
         pd.Timestamp(year=1900, month=1, day=1): "Winter",

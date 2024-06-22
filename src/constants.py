@@ -1,6 +1,6 @@
 """ Project constants, parameters, and settings."""
 
-COORD_REF_SYSTEM = "EPSG:4326"
+COORD_REF_SYSTEM = "EPSG:4326"  # default geojson CRS
 
 DAY_OF_WEEK_MAP = {
     0: "Monday",
