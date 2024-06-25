@@ -30,6 +30,9 @@ https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz
 
 MTA Bridge and Tunnel Toll Data <br>
 https://data.ny.gov/Transportation/Hourly-Traffic-on-Metropolitan-Transportation-Auth/qzve-kjga/about_data
+
+NYC City Council District Shapefiles <br>
+https://data.cityofnewyork.us/City-Government/City-Council-Districts/yusd-j4xi
 <br><br>
 
 ### Reproducing Processed Data and Analysis
