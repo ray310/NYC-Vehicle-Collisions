@@ -13,3 +13,4 @@ To better understand where and when collisions occur we:
 - [Identify hot spots]({{ "/content/hotspots" | relative_url }})
 - [Review trends]({{ "/content/trends" | relative_url }})
 - [Compare collisions by NYPD precinct]({{ "/content/police" | relative_url }})
+- [Compare collisions by City Council district]({{ "/content/citycouncil" | relative_url }})

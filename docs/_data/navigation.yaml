@@ -38,7 +38,7 @@
       link: /content/trends/monthly
     - name: Weekly
       link: /content/trends/weekly
-- name: Collisions by Police Precinct
+- name: By Police Precinct
   link: /content/police
   dropdown:
     - name: Fatal Collisions
@@ -47,3 +47,14 @@
       link: /content/police/precinct_serious
     - name: Pedestrian / Cyclist Collisions
       link: /content/police/precinct_non_motor
+- name: By City Council District
+  link: /content/citycouncil
+  dropdown:
+    - name: Serious Collisions
+      link: /content/citycouncil/citycouncil_serious
+    - name: Pedestrian Collisions
+      link: /content/citycouncil/citycouncil_pedestrian
+    - name: Cyclist Collisions
+      link: /content/citycouncil/citycouncil_cyclist
+    - name: Fatal Collisions
+      link: /content/citycouncil/citycouncil_fatal
