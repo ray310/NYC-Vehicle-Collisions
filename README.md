@@ -36,11 +36,13 @@ https://data.cityofnewyork.us/City-Government/City-Council-Districts/yusd-j4xi
 <br><br>
 
 ### Reproducing Processed Data and Analysis
-1) Download and save data to local directory, e.g. `/data/raw`
-2) Create and activate project virtual environment 
+1) Clone repo
+2) Download and save data to local directory, e.g. `/data/raw`
+3) Create and activate project virtual environment 
    - Python 3.12.3 is used
    - Virtual environment can be created from either
    `conda_environment.yaml` or `requirements.txt`
-3) Update data input and output parameters in `process_raw_data.py` as appropriate
-4) Run `process_raw_data.py` (this script may take a while)
-5) Run notebooks
+4) Update data input and output parameters in `process_raw_data.py` as appropriate
+5) Run `process_raw_data.py` (this script may take a while)
+6) To obtain City Council point of contact information, run `src/scrape_city_council.py` with required command line arguments
+7) Run notebooks
