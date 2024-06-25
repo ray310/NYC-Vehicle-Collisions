@@ -437,7 +437,7 @@ def prep_choropleth_df(
     groupby_df.index = groupby_df.index.astype(int)
     groupby_df[groupby_df.index.name] = (
         groupby_df.index
-    )  # need 2 columns for Folium Choropleth
+    )
     return gpd.GeoDataFrame(groupby_df, geometry=geoseries)
 
 
