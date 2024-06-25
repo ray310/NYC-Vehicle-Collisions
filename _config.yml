@@ -2,6 +2,7 @@ source: docs
 theme: bulma-clean-theme
 fixed_navbar: top
 footer_menu: footer_links
+url: https://ray310.github.io/NYC-Vehicle-Collisions/
 google_analytics: G-RF9V1J2QG0
 plugins:
   - jekyll-sitemap
