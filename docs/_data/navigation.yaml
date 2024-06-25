@@ -41,12 +41,14 @@
 - name: By Police Precinct
   link: /content/police
   dropdown:
-    - name: Fatal Collisions
-      link: /content/police/precinct_fatal
     - name: Serious Collisions
       link: /content/police/precinct_serious
-    - name: Pedestrian / Cyclist Collisions
-      link: /content/police/precinct_non_motor
+    - name: Pedestrian Collisions
+      link: /content/police/precinct_pedestrian
+    - name: Cyclist Collisions
+      link: /content/police/precinct_cyclist
+    - name: Fatal Collisions
+      link: /content/police/precinct_fatal
 - name: By City Council District
   link: /content/citycouncil
   dropdown:
