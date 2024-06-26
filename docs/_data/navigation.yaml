@@ -9,12 +9,10 @@
       link: /content/maps/serious_collisions_20_21
     - name: Serious Collisions 2018 - 2019
       link: /content/maps/serious_collisions_18_19
-    - name: Pedestrian / Cyclist Collisions 2022 - 2023
-      link: /content/maps/non_motor_collisions_22_23
-    - name: Pedestrian / Cyclist Collisions 2020 - 2021
-      link: /content/maps/non_motor_collisions_20_21
-    - name: Pedestrian / Cyclist Collisions 2018 - 2019
-      link: /content/maps/non_motor_collisions_18_19
+    - name: Pedestrian Collisions 2018 - 2023
+      link: /content/maps/pedestrian_18_23
+    - name: Cyclist Collisions 2018 - 2023
+      link: /content/maps/cyclist_18_23
 
 - name: Hot Spots
   link: /content/hotspots
