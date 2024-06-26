@@ -6,8 +6,7 @@ hide_hero: true
 ---
 # Fatal Vehicle Collisions
 
-Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
-
+{% include visit_github.html %}
 
 {% include click.html %}
 <iframe src="fatal_map.html" title="Marker cluster map of fatal collisions in New York City"></iframe>

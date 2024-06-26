@@ -5,7 +5,9 @@ description: Weekly vehicle collisions patterns with 2D-heatmaps (day-of-week, t
 hide_hero: true
 ---
 # Weekly Patterns
-_Serious collisions are collisions that result in injury or death_
+{% include serious.html %}
+
+{% include visit_github.html %}
 
 <hr class="hr">
 #### Collisions increase from Sunday to Friday

@@ -6,7 +6,7 @@ hide_hero: true
 ---
 # Vehicle Collisions with Pedestrians and Cyclists 2018 - 2019
 
-Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
+{% include visit_github.html %}
 
 {% include slow_load.html %}
 

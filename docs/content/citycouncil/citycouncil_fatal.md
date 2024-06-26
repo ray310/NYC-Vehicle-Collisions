@@ -5,7 +5,8 @@ description: Choropleth map of average annual fatal (deaths) vehicle collisions 
 hide_hero: true
 ---
 # Fatal Vehicle Collisions by NYC City Council District
-Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
+
+{% include visit_github.html %}
 
 {% include click_cc.html %}
 <iframe src="district_fatal_map.html" title="Choropleth map of fatal collisions by NYC City Council District"></iframe>

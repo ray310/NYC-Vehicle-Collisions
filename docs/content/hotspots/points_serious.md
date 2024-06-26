@@ -7,7 +7,7 @@ hide_hero: true
 # Dangerous Locations
 Single points with a high number of injuries and deaths from vehicle collisions.
 
-Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
+{% include visit_github.html %}
 
 {% include click.html %}
 <iframe src="points_serious_map.html" title="Map of single points with a high number of injuries and deaths"></iframe>

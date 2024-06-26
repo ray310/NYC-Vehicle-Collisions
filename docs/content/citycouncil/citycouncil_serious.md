@@ -7,7 +7,7 @@ hide_hero: true
 # Serious Vehicle Collisions by NYC City Council District
 Serious collisions are collisions that result in injury or death. 
 
-Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
+{% include visit_github.html %}
 
 {% include click_cc.html %}
 <iframe src="district_serious_map.html" title="Choropleth map of serious collisions by NYC City Council District"></iframe>

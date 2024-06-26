@@ -5,7 +5,9 @@ description: Average monthly vehicle collisions, collision injuries and deaths, 
 hide_hero: true
 ---
 # Collisions by Month
-_Serious collisions are collisions that result in injury or death_
+{% include serious.html %}
+
+{% include visit_github.html %}
 
 <hr class="hr">
 #### Collisions are elevated from May to October

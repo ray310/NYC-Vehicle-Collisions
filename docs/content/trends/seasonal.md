@@ -5,7 +5,9 @@ description: Seasonal vehicle collisions with injuries and deaths, and collision
 hide_hero: true
 ---
 # Collisions by Season
-_Serious collisions are collisions that result in injury or death_
+{% include serious.html %}
+
+{% include visit_github.html %}
 
 <hr class="hr">
 #### Serious collisions peak in summer but collisions with pedestrians and cyclists peak in the fall

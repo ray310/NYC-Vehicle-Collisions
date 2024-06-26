@@ -5,9 +5,9 @@ description: Interactive map of serious vehicle collisions (causing injuries or 
 hide_hero: true
 ---
 # Serious Vehicle Collisions 2022 - 2023
-Serious collisions are collisions that result in injury or death.
+{% include serious.html %}
 
-Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
+{% include visit_github.html %}
 
 {% include slow_load.html %}
 
