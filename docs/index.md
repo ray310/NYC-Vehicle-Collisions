@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Analyzing New York City Vehicle Collisions
-description: Analysis of when and where New York City (NYC) vehicle collisions occur with a focus on collisions involving pedestrians and cyclists
+description: Analysis of when and where New York City (NYC) vehicle collisions (crashes) occur with a focus on collisions involving pedestrians and cyclists
 hide_hero: true
 ---
 # Analysis of New York City Vehicle Collisions

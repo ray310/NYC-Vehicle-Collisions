@@ -23,3 +23,8 @@ hide_footer: true
 ##### MTA Bridge and Tunnel Toll Data
 
 [https://data.ny.gov/Transportation/Hourly-Traffic-on-Metropolitan-Transportation-Auth/qzve-kjga/about_data]({{ "https://data.ny.gov/Transportation/Hourly-Traffic-on-Metropolitan-Transportation-Auth/qzve-kjga/about_data" | absolute_url }})
+
+<br>
+##### NYC City Council District Shapefiles
+
+[https://data.cityofnewyork.us/City-Government/City-Council-Districts/yusd-j4xi]({{"https://data.cityofnewyork.us/City-Government/City-Council-Districts/yusd-j4xi" | absolute_url }})
