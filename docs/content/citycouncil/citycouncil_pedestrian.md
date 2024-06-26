@@ -8,5 +8,5 @@ hide_hero: true
 Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
 
 _Click on individual districts for council member contact information_
-<iframe src="district_pedestrian_map.html"></iframe>
+<iframe src="district_pedestrian_map.html" title="Choropleth map of collisions with pedestrians by NYC City Council District"></iframe>
 {% include analysis_data_range.html %}

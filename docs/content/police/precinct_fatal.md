@@ -8,5 +8,5 @@ hide_hero: true
 
 Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
 
-<iframe src="precinct_fatal_map.html"></iframe>
+<iframe src="precinct_fatal_map.html" title="Choropleth map of fatal collisions by NYPD precinct"></iframe>
 {% include analysis_data_range.html %}

@@ -7,5 +7,5 @@ hide_hero: true
 # Dangerous Locations
 Single points with a high number of injuries and deaths from vehicle collisions.
 
-<iframe src="points_serious_map.html"></iframe>
+<iframe src="points_serious_map.html" title="Map of single points with a high number of injuries and deaths"></iframe>
 {% include map_data_range_full.html %}

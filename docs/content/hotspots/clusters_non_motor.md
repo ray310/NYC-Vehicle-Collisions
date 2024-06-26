@@ -8,5 +8,5 @@ hide_hero: true
 Dangerous areas for pedestrians and cyclists are clusters of collisions with a high number of pedestrian / cyclist injuries and deaths from vehicle collisions. Clusters were identified by tuning a density-based clustering algorithm.
 
 _Note that this may take a few seconds to load._
-<iframe src="clusters_non_motor_map.html"></iframe>
+<iframe src="clusters_non_motor_map.html" title="Marker cluster map identifying areas with a high density of collisions with pedestrians in New York City"></iframe>
 {% include map_data_range_full.html %}

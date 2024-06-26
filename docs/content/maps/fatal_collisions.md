@@ -7,5 +7,5 @@ hide_hero: true
 # Fatal Vehicle Collisions
 Click on icons for more information.
 
-<iframe src="fatal_map.html"></iframe>
+<iframe src="fatal_map.html" title="Marker cluster map of fatal collisions in New York City"></iframe>
 {% include map_data_range_full.html %}

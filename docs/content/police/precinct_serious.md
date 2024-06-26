@@ -9,5 +9,5 @@ Serious collisions are collisions that result in injury or death.
 
 Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
 
-<iframe src="precinct_serious_map.html"></iframe>
+<iframe src="precinct_serious_map.html" title="Choropleth map of serious collisions by NYPD precinct"></iframe>
 {% include analysis_data_range.html %}

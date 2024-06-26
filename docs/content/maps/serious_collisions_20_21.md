@@ -10,5 +10,5 @@ Serious collisions are collisions that result in injury or death.
 Click on icons for more information.
 
 _Note that this may take a few seconds to load._
-<iframe src="serious_map_20_21.html"></iframe>
+<iframe src="serious_map_20_21.html" title="Marker cluster map of serious collisions during 2020 and 2021 in New York City"></iframe>
 {% include map_data_range_20_21.html %}
