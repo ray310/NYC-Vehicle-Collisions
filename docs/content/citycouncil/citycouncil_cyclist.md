@@ -7,6 +7,6 @@ hide_hero: true
 # Vehicle Collisions with Cyclists by NYC City Council District
 Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
 
-_Click on individual districts for council member contact information_
+{% include click_cc.html %}
 <iframe src="district_cyclist_map.html" title="Choropleth map of collisions with cyclists by NYC City Council District"></iframe>
 {% include analysis_data_range.html %}

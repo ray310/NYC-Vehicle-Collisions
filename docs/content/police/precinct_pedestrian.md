@@ -8,5 +8,6 @@ hide_hero: true
 
 Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
 
+{% include click_choro.html %}
 <iframe src="precinct_pedestrian_map.html" title="Choropleth map of collisions with pedestrians by NYPD precinct"></iframe>
 {% include analysis_data_range.html %}

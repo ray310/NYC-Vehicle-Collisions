@@ -7,8 +7,10 @@ hide_hero: true
 # Serious Vehicle Collisions 2018 - 2019
 Serious collisions are collisions that result in injury or death.
 
-Click on icons for more information.
+Please visit the project [GitHub page](https://github.com/ray310/NYC-Vehicle-Collisions) to see how this map was made.
 
-_Note that this may take a few seconds to load._
+{% include slow_load.html %}
+
+{% include click.html %}
 <iframe src="serious_map_18_19.html" title="Marker cluster map of serious collisions during 2018 and 2019 in New York City"></iframe>
 {% include map_data_range_18_19.html %}
