@@ -12,7 +12,7 @@ from shapely.strtree import STRtree
 
 
 def make_week_crosstab(df, divisor, values=None, aggfunc=None, day_of_week_map=None):
-    """Returns an hour / day-of-week crosstab scaled by a divisor."""
+    """Return an hour / day-of-week crosstab scaled by a divisor."""
     ct = pd.crosstab(
         index=df["datetime"].dt.dayofweek,
         columns=df["datetime"].dt.hour,
@@ -28,9 +28,11 @@ def make_week_crosstab(df, divisor, values=None, aggfunc=None, day_of_week_map=N
 def get_crosstab_min_max(
     df, col, categories, divisor=None, values_col=None, aggfunc=None
 ):
-    """Returns the absolute min and absolute max values of weekly crosstabs across
-    all categories. Categories should be an iterable and not a tuple containing a
-    single string. Used to ensure that different heatmaps have the same scale."""
+    """Return the min and max values of weekly crosstabs across all categories.
+
+    Categories should be an iterable. Used to ensure that different heatmaps
+    have the same scale.
+    """
     max_val = float("-inf")
     min_val = float("inf")
     for cat in categories:
@@ -53,7 +55,7 @@ def get_crosstab_min_max(
 def make_heatmap_labels(
     title, x_label="Hour of Day", y_label="", cbar_label="Number of Collisions per Hour"
 ):
-    """Returns a dictionary of labels for a 2D heatmap."""
+    """Return a dictionary of labels for a 2D heatmap."""
     ct_labels = {
         "title": title,
         "x_label": x_label,
@@ -64,45 +66,62 @@ def make_heatmap_labels(
 
 
 def date_to_season(dt: datetime.datetime):
-    """Converts individual datetime or pd.Timestamp to season of year"""
+    """Convert individual datetime or pd.Timestamp to season of year."""
     # day of year corresponding to following dates:
     # 1-Jan, 21-Mar, 21-Jun, 21-Sep, 21-Dec, 31-Dec
     # day of year can be obtained using datetime_obj.timetuple().tm_yday
     # 21-March is considered first day of Spring, etc.
-    SEASON_BINS = (1, 80, 172, 264, 355, 365)
-    LEAP_YEAR_SEASON_BINS = (1, 81, 173, 265, 356, 366)
-    SEASON_LABELS = ("Winter", "Spring", "Summer", "Fall", "Winter")
+    season_bins = (1, 80, 172, 264, 355, 365)
+    leap_year_season_bins = (1, 81, 173, 265, 356, 366)
+    season_labels = ("Winter", "Spring", "Summer", "Fall", "Winter")
 
-    season_bins = SEASON_BINS
+    bins = season_bins
     if calendar.isleap(dt.year):
-        season_bins = LEAP_YEAR_SEASON_BINS
-    idx = (bisect.bisect(season_bins, dt.timetuple().tm_yday) - 1) % len(SEASON_LABELS)
-    return SEASON_LABELS[idx]
+        bins = leap_year_season_bins
+    idx = (bisect.bisect(bins, dt.timetuple().tm_yday) - 1) % len(season_labels)
+    return season_labels[idx]
 
 
-def id_nearest_shape(point: shapely.Point, r_tree: shapely.STRtree, shape_names):
-    """Returns the name (from list of shape_names) of the nearest Shapely shape to
-    input Shapely point. Uses a Shapely STRtree (R-tree) to perform a faster lookup"""
-    name = None
-    if point.is_valid:
-        name = shape_names[r_tree.nearest(point)]
-    return name
+def read_geojson(shape_file_loc: str, property_name: str):
+    """
+    Return list of geometry ids and list of geometries from geojson.
+
+    Assumes geojson conforms to 2016 geojson convention.
+    """
+    with open(shape_file_loc, encoding="utf-8") as fp:
+        geojson = json.load(fp)
+    geom_ids = [x["properties"][property_name] for x in geojson["features"]]
+    geoms = [shape(x["geometry"]) for x in geojson["features"]]
+    return geom_ids, geoms
+
+
+def id_nearest_shape(geometry: shapely.Point, r_tree: shapely.STRtree, shape_ids: list):
+    """
+    Return the id (from list of shape_ids) of the nearest shape to input geometry.
+
+    Uses a Shapely STRtree (R-tree) to perform a faster lookup.
+    """
+    sid = None
+    if shapely.is_valid(geometry) and not shapely.is_empty(geometry):
+        sid = shape_ids[r_tree.nearest(geometry)]
+    return sid
 
 
 def add_location_feature(
-    gdf: gpd.GeoDataFrame, shape_file_loc, property_name, feature_name=None
+    gdf: gpd.GeoDataFrame,
+    geojson_path: str,
+    geojson_property: str,
+    feature_name: str = None,
 ):
-    """Returns a GeoPandas.Dataframe containing added location feature based on
-    lat-long lookup. Takes GeoPandas.Dataframe with point geometries, location
-    of shape file for point lookup, property_name, and optionally feature_name"""
-    with open(shape_file_loc, encoding="utf-8") as fp:  # downloaded and locally-saved
-        geojson = json.load(fp)
-    geos = [shape(x["geometry"]) for x in geojson["features"]]
-    geo_id = [x["properties"][property_name] for x in geojson["features"]]
-    tree = STRtree(geos)
+    """Return a GeoPandas.Dataframe with added location-related feature.
+
+    Feature value is set to identifier of the nearest geometry in the read geojson.
+    """
+    geom_ids, geoms = read_geojson(geojson_path, geojson_property)
+    tree = STRtree(geoms)
     if not feature_name:
-        feature_name = property_name
-    gdf.loc[gdf["valid_lat_long"], feature_name] = gdf.apply(
-        lambda x: id_nearest_shape(x.geometry, tree, geo_id), axis=1
+        feature_name = geojson_property
+    gdf[feature_name] = gdf.apply(
+        lambda x: id_nearest_shape(x.geometry, tree, geom_ids), axis=1
     )
     return gdf
