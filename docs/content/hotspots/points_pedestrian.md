@@ -5,7 +5,9 @@ description: Interactive map of points with a high number of pedestrian injuries
 hide_hero: true
 ---
 # Dangerous Points for Pedestrians
-{% include dangerous_points.html %} The below map contains 100 of the most dangerous points for pedestrians in New York City.
+{% include dangerous_points.html %} 
+
+__The below map contains 100 of the most dangerous points for pedestrians in New York City.__
 
 
 {% include visit_github.html %}

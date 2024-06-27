@@ -5,7 +5,9 @@ description: Interactive map of points with a high number of cyclist injuries an
 hide_hero: true
 ---
 # Dangerous Points for Cyclists
-{% include dangerous_points.html %} The below map contains 100 of the most dangerous points for cyclists in New York City.
+{% include dangerous_points.html %} 
+
+__The below map contains 100 of the most dangerous points for cyclists in New York City.__
 
 {% include visit_github.html %}
 
