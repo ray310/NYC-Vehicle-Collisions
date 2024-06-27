@@ -17,14 +17,19 @@
 - name: Hot Spots
   link: /content/hotspots
   dropdown:
-    - name: Dangerous Locations
-      link: /content/hotspots/points_serious
-    - name: Dangerous Locations for Pedestrians / Cyclists
-      link: /content/hotspots/points_non_motor
     - name: Dangerous Areas
       link: /content/hotspots/clusters_serious
-    - name: Dangerous Areas for Pedestrians / Cyclists
-      link: /content/hotspots/clusters_non_motor
+    - name: Dangerous Areas for Pedestrians
+      link: /content/hotspots/clusters_pedestrian
+    - name: Dangerous Areas for Cyclists
+      link: /content/hotspots/clusters_cyclist
+    - name: Dangerous Points
+      link: /content/hotspots/points_serious
+    - name: Dangerous Points Pedestrians
+      link: /content/hotspots/points_pedestrian
+    - name: Dangerous Points Cyclists
+      link: /content/hotspots/points_cyclist
+
 - name: Trends
   link: /content/trends
   dropdown:

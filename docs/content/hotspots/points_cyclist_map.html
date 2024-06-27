@@ -1,0 +1,3669 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9884723db96c2f1b024cb0bc56f8851b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9884723db96c2f1b024cb0bc56f8851b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9884723db96c2f1b024cb0bc56f8851b = L.map(
+                "map_9884723db96c2f1b024cb0bc56f8851b",
+                {
+                    center: [40.73, -73.92],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7e2b177cf6307bd9e312064e942404c8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var marker_42b3944c324af0a84f8df6ab5a6dd29f = L.marker(
+                [40.7942333, -73.9469462],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_b6775e569406b1fe360f8f907f9ecac7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_42b3944c324af0a84f8df6ab5a6dd29f.setIcon(icon_b6775e569406b1fe360f8f907f9ecac7);
+        
+    
+        var popup_f4902ccf048c54759c5495e74c445e88 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19b087b20c90bc7e3f287289ee03a316 = $(`<div id="html_19b087b20c90bc7e3f287289ee03a316" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 3</div>`)[0];
+                popup_f4902ccf048c54759c5495e74c445e88.setContent(html_19b087b20c90bc7e3f287289ee03a316);
+            
+        
+
+        marker_42b3944c324af0a84f8df6ab5a6dd29f.bindPopup(popup_f4902ccf048c54759c5495e74c445e88)
+        ;
+
+        
+    
+    
+            marker_42b3944c324af0a84f8df6ab5a6dd29f.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_156d8b34be3907ecfbe931efad87de15 = L.marker(
+                [40.8252, -73.867714],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_d1df49f8d2f3dd308efff1cd5bea79d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_156d8b34be3907ecfbe931efad87de15.setIcon(icon_d1df49f8d2f3dd308efff1cd5bea79d8);
+        
+    
+        var popup_0713182d8a174ebcec35056f7b184288 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bcfd72767e493a155b8eadedebf55e91 = $(`<div id="html_bcfd72767e493a155b8eadedebf55e91" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 13 CYCLIST KILLED: 2</div>`)[0];
+                popup_0713182d8a174ebcec35056f7b184288.setContent(html_bcfd72767e493a155b8eadedebf55e91);
+            
+        
+
+        marker_156d8b34be3907ecfbe931efad87de15.bindPopup(popup_0713182d8a174ebcec35056f7b184288)
+        ;
+
+        
+    
+    
+            marker_156d8b34be3907ecfbe931efad87de15.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 13
+CYCLIST KILLED: 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dd0c9636dc520d02aec47a1acd040b1b = L.marker(
+                [40.729046, -74.01073],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_a25befa8b028e6c0c1b4e7fa6350a096 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_dd0c9636dc520d02aec47a1acd040b1b.setIcon(icon_a25befa8b028e6c0c1b4e7fa6350a096);
+        
+    
+        var popup_6bed1078394285415a80d82464af3438 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dfd444a12ca48268ef1e451d8eb7df2c = $(`<div id="html_dfd444a12ca48268ef1e451d8eb7df2c" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 7 CYCLIST KILLED: 2</div>`)[0];
+                popup_6bed1078394285415a80d82464af3438.setContent(html_dfd444a12ca48268ef1e451d8eb7df2c);
+            
+        
+
+        marker_dd0c9636dc520d02aec47a1acd040b1b.bindPopup(popup_6bed1078394285415a80d82464af3438)
+        ;
+
+        
+    
+    
+            marker_dd0c9636dc520d02aec47a1acd040b1b.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 7
+CYCLIST KILLED: 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_478c0c264965bd1f6d28733db6f54588 = L.marker(
+                [40.71453, -73.9444],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_0c4baec6366f86e441e776ba57948783 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_478c0c264965bd1f6d28733db6f54588.setIcon(icon_0c4baec6366f86e441e776ba57948783);
+        
+    
+        var popup_357d6f1ee81aff02d5e8d7a9348a660f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90dcd6552955e89e6e0480bc6a0a9118 = $(`<div id="html_90dcd6552955e89e6e0480bc6a0a9118" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 2</div>`)[0];
+                popup_357d6f1ee81aff02d5e8d7a9348a660f.setContent(html_90dcd6552955e89e6e0480bc6a0a9118);
+            
+        
+
+        marker_478c0c264965bd1f6d28733db6f54588.bindPopup(popup_357d6f1ee81aff02d5e8d7a9348a660f)
+        ;
+
+        
+    
+    
+            marker_478c0c264965bd1f6d28733db6f54588.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_25ff7d6fa3c8b97901f70a0c9dd945a9 = L.marker(
+                [40.7262143, -73.920515],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_b709fb18ff8d240a0ceaea4403041374 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_25ff7d6fa3c8b97901f70a0c9dd945a9.setIcon(icon_b709fb18ff8d240a0ceaea4403041374);
+        
+    
+        var popup_d9a8c91a7f6036c1eacae54df89dd48b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2eb4d60d1e8f66152d62f5a6c42271a = $(`<div id="html_a2eb4d60d1e8f66152d62f5a6c42271a" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 0 CYCLIST KILLED: 2</div>`)[0];
+                popup_d9a8c91a7f6036c1eacae54df89dd48b.setContent(html_a2eb4d60d1e8f66152d62f5a6c42271a);
+            
+        
+
+        marker_25ff7d6fa3c8b97901f70a0c9dd945a9.bindPopup(popup_d9a8c91a7f6036c1eacae54df89dd48b)
+        ;
+
+        
+    
+    
+            marker_25ff7d6fa3c8b97901f70a0c9dd945a9.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 0
+CYCLIST KILLED: 2
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5f78b51c5c9ecff91c93c69ad039cd5e = L.marker(
+                [40.801754, -73.93121],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_14b18085b04e9145d57b7951167e5de2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5f78b51c5c9ecff91c93c69ad039cd5e.setIcon(icon_14b18085b04e9145d57b7951167e5de2);
+        
+    
+        var popup_50dbb4709f89cd0b9f58b41390a2a2fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f73652adfe425c2cb18df0db3408782 = $(`<div id="html_6f73652adfe425c2cb18df0db3408782" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 17 CYCLIST KILLED: 1</div>`)[0];
+                popup_50dbb4709f89cd0b9f58b41390a2a2fd.setContent(html_6f73652adfe425c2cb18df0db3408782);
+            
+        
+
+        marker_5f78b51c5c9ecff91c93c69ad039cd5e.bindPopup(popup_50dbb4709f89cd0b9f58b41390a2a2fd)
+        ;
+
+        
+    
+    
+            marker_5f78b51c5c9ecff91c93c69ad039cd5e.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 17
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6d8254cd71b415f98e2e3fa391c13ff3 = L.marker(
+                [40.718143, -73.993835],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_f22b76948e6cdf027393be9a82dd117a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6d8254cd71b415f98e2e3fa391c13ff3.setIcon(icon_f22b76948e6cdf027393be9a82dd117a);
+        
+    
+        var popup_09ac4813643132c288e7a28d04153941 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dffbc57f8be236b30ab6214de288d0d8 = $(`<div id="html_dffbc57f8be236b30ab6214de288d0d8" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 36 CYCLIST KILLED: 0</div>`)[0];
+                popup_09ac4813643132c288e7a28d04153941.setContent(html_dffbc57f8be236b30ab6214de288d0d8);
+            
+        
+
+        marker_6d8254cd71b415f98e2e3fa391c13ff3.bindPopup(popup_09ac4813643132c288e7a28d04153941)
+        ;
+
+        
+    
+    
+            marker_6d8254cd71b415f98e2e3fa391c13ff3.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 36
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f7c07eba524d5a0a4f6821b1bfd672f5 = L.marker(
+                [40.7553365, -73.8432452],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_7cbdcb1805e800564a810edf51da4566 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f7c07eba524d5a0a4f6821b1bfd672f5.setIcon(icon_7cbdcb1805e800564a810edf51da4566);
+        
+    
+        var popup_f133ccaef72746d44acf7af12ce59ec4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c79f9c6b0199ae978dab0f58110d332 = $(`<div id="html_2c79f9c6b0199ae978dab0f58110d332" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 14 CYCLIST KILLED: 1</div>`)[0];
+                popup_f133ccaef72746d44acf7af12ce59ec4.setContent(html_2c79f9c6b0199ae978dab0f58110d332);
+            
+        
+
+        marker_f7c07eba524d5a0a4f6821b1bfd672f5.bindPopup(popup_f133ccaef72746d44acf7af12ce59ec4)
+        ;
+
+        
+    
+    
+            marker_f7c07eba524d5a0a4f6821b1bfd672f5.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 14
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_54b7ca00aa8ac0ab6ad88b4a0f0e5e6d = L.marker(
+                [40.69613, -73.987114],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_044791f186214c73db86ed29e737f65b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_54b7ca00aa8ac0ab6ad88b4a0f0e5e6d.setIcon(icon_044791f186214c73db86ed29e737f65b);
+        
+    
+        var popup_6d9f836562394f4e62085feb2e543f82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_922f8a22c52476bbc5545fca674880b0 = $(`<div id="html_922f8a22c52476bbc5545fca674880b0" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 34 CYCLIST KILLED: 0</div>`)[0];
+                popup_6d9f836562394f4e62085feb2e543f82.setContent(html_922f8a22c52476bbc5545fca674880b0);
+            
+        
+
+        marker_54b7ca00aa8ac0ab6ad88b4a0f0e5e6d.bindPopup(popup_6d9f836562394f4e62085feb2e543f82)
+        ;
+
+        
+    
+    
+            marker_54b7ca00aa8ac0ab6ad88b4a0f0e5e6d.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 34
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21b58194841b591814093f628508c8e5 = L.marker(
+                [40.71997, -73.992905],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_73bfca295d81eeb5223d7764342fd5ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_21b58194841b591814093f628508c8e5.setIcon(icon_73bfca295d81eeb5223d7764342fd5ae);
+        
+    
+        var popup_7985f6556aa83ea35fa5288e2c900c35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_111f527967faaf4f028c61f33c15b194 = $(`<div id="html_111f527967faaf4f028c61f33c15b194" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 32 CYCLIST KILLED: 0</div>`)[0];
+                popup_7985f6556aa83ea35fa5288e2c900c35.setContent(html_111f527967faaf4f028c61f33c15b194);
+            
+        
+
+        marker_21b58194841b591814093f628508c8e5.bindPopup(popup_7985f6556aa83ea35fa5288e2c900c35)
+        ;
+
+        
+    
+    
+            marker_21b58194841b591814093f628508c8e5.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 32
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aa21d1ff0273b8658f14740d70b7e60a = L.marker(
+                [40.71148, -73.9456],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_0dff4c7a134a1e1d6fb455a7f57d76cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_aa21d1ff0273b8658f14740d70b7e60a.setIcon(icon_0dff4c7a134a1e1d6fb455a7f57d76cf);
+        
+    
+        var popup_1935bcb42b0ecf1f92c1d59fbd2944aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d71b53204a8e3721a27e9e46ac8874e9 = $(`<div id="html_d71b53204a8e3721a27e9e46ac8874e9" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 12 CYCLIST KILLED: 1</div>`)[0];
+                popup_1935bcb42b0ecf1f92c1d59fbd2944aa.setContent(html_d71b53204a8e3721a27e9e46ac8874e9);
+            
+        
+
+        marker_aa21d1ff0273b8658f14740d70b7e60a.bindPopup(popup_1935bcb42b0ecf1f92c1d59fbd2944aa)
+        ;
+
+        
+    
+    
+            marker_aa21d1ff0273b8658f14740d70b7e60a.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 12
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4aaa40876d9db98b82e6b8468bf24788 = L.marker(
+                [40.818558, -73.92732],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_9d2563a0629a6c314c50b2c7fb35fe18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4aaa40876d9db98b82e6b8468bf24788.setIcon(icon_9d2563a0629a6c314c50b2c7fb35fe18);
+        
+    
+        var popup_3ad965763ae412656e7fd08ee2d25975 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_131747e7b67533455aa1948a2813c3af = $(`<div id="html_131747e7b67533455aa1948a2813c3af" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 11 CYCLIST KILLED: 1</div>`)[0];
+                popup_3ad965763ae412656e7fd08ee2d25975.setContent(html_131747e7b67533455aa1948a2813c3af);
+            
+        
+
+        marker_4aaa40876d9db98b82e6b8468bf24788.bindPopup(popup_3ad965763ae412656e7fd08ee2d25975)
+        ;
+
+        
+    
+    
+            marker_4aaa40876d9db98b82e6b8468bf24788.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 11
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1851b3d6bc9465a6ba0801f18553cad1 = L.marker(
+                [40.7528, -73.979294],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_63a496f7d46708e33aa914795d840ad8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1851b3d6bc9465a6ba0801f18553cad1.setIcon(icon_63a496f7d46708e33aa914795d840ad8);
+        
+    
+        var popup_f799f9de3f3332bdb518eccf28106cea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_02d69dd8c4b5904595b592e6bb514577 = $(`<div id="html_02d69dd8c4b5904595b592e6bb514577" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 11 CYCLIST KILLED: 1</div>`)[0];
+                popup_f799f9de3f3332bdb518eccf28106cea.setContent(html_02d69dd8c4b5904595b592e6bb514577);
+            
+        
+
+        marker_1851b3d6bc9465a6ba0801f18553cad1.bindPopup(popup_f799f9de3f3332bdb518eccf28106cea)
+        ;
+
+        
+    
+    
+            marker_1851b3d6bc9465a6ba0801f18553cad1.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 11
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c73e860f2e25bd534742c59cdf2bce00 = L.marker(
+                [40.721474, -73.98383],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_fb38c6dd64dae563393287238d6a6c7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c73e860f2e25bd534742c59cdf2bce00.setIcon(icon_fb38c6dd64dae563393287238d6a6c7c);
+        
+    
+        var popup_216ceeda9b25b1ff6c9d1ccf1d337c1f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e51aa4d69232f4a4f4ee0138e45a1280 = $(`<div id="html_e51aa4d69232f4a4f4ee0138e45a1280" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 10 CYCLIST KILLED: 1</div>`)[0];
+                popup_216ceeda9b25b1ff6c9d1ccf1d337c1f.setContent(html_e51aa4d69232f4a4f4ee0138e45a1280);
+            
+        
+
+        marker_c73e860f2e25bd534742c59cdf2bce00.bindPopup(popup_216ceeda9b25b1ff6c9d1ccf1d337c1f)
+        ;
+
+        
+    
+    
+            marker_c73e860f2e25bd534742c59cdf2bce00.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 10
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_22f5add90a8d73f9e45e82915c3e9e4f = L.marker(
+                [40.838497, -73.939835],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_d760fd2e98e16547ccd2a5b198b5cf0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_22f5add90a8d73f9e45e82915c3e9e4f.setIcon(icon_d760fd2e98e16547ccd2a5b198b5cf0d);
+        
+    
+        var popup_9dbafe2c17df36d958c3de7ec003cd3f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f310235184ef3518fc3e9a4eb6a352ef = $(`<div id="html_f310235184ef3518fc3e9a4eb6a352ef" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 10 CYCLIST KILLED: 1</div>`)[0];
+                popup_9dbafe2c17df36d958c3de7ec003cd3f.setContent(html_f310235184ef3518fc3e9a4eb6a352ef);
+            
+        
+
+        marker_22f5add90a8d73f9e45e82915c3e9e4f.bindPopup(popup_9dbafe2c17df36d958c3de7ec003cd3f)
+        ;
+
+        
+    
+    
+            marker_22f5add90a8d73f9e45e82915c3e9e4f.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 10
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f6d25a87ea5ad4a8128b83c40276e05 = L.marker(
+                [40.65319, -73.96622],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_921955eaa9c67babb449b035f09a35ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7f6d25a87ea5ad4a8128b83c40276e05.setIcon(icon_921955eaa9c67babb449b035f09a35ef);
+        
+    
+        var popup_6b096d60073db5f161ba0d68630bb25d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd527e983b1f3f44f8facf34838f727e = $(`<div id="html_fd527e983b1f3f44f8facf34838f727e" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 10 CYCLIST KILLED: 1</div>`)[0];
+                popup_6b096d60073db5f161ba0d68630bb25d.setContent(html_fd527e983b1f3f44f8facf34838f727e);
+            
+        
+
+        marker_7f6d25a87ea5ad4a8128b83c40276e05.bindPopup(popup_6b096d60073db5f161ba0d68630bb25d)
+        ;
+
+        
+    
+    
+            marker_7f6d25a87ea5ad4a8128b83c40276e05.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 10
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_370ac07041e040bcce633d8658a7df44 = L.marker(
+                [40.58196, -73.959946],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_1fcc5ddc8c51f8921424781964511758 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_370ac07041e040bcce633d8658a7df44.setIcon(icon_1fcc5ddc8c51f8921424781964511758);
+        
+    
+        var popup_a266c9c37a0ccb7f8fa7d9e2dae462c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_553473acf28fe2acc4c23c7f96dba567 = $(`<div id="html_553473acf28fe2acc4c23c7f96dba567" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 9 CYCLIST KILLED: 1</div>`)[0];
+                popup_a266c9c37a0ccb7f8fa7d9e2dae462c1.setContent(html_553473acf28fe2acc4c23c7f96dba567);
+            
+        
+
+        marker_370ac07041e040bcce633d8658a7df44.bindPopup(popup_a266c9c37a0ccb7f8fa7d9e2dae462c1)
+        ;
+
+        
+    
+    
+            marker_370ac07041e040bcce633d8658a7df44.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 9
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1e96bb9aec58f8ffbb42833462fe9788 = L.marker(
+                [40.759163, -73.988396],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_c939228e1dcfad1b9d7033b420a8c1a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1e96bb9aec58f8ffbb42833462fe9788.setIcon(icon_c939228e1dcfad1b9d7033b420a8c1a2);
+        
+    
+        var popup_82d578721f65e560d89d73705f73599f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9599a1d9b876c0ed0dadab0f5747d4a7 = $(`<div id="html_9599a1d9b876c0ed0dadab0f5747d4a7" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 9 CYCLIST KILLED: 1</div>`)[0];
+                popup_82d578721f65e560d89d73705f73599f.setContent(html_9599a1d9b876c0ed0dadab0f5747d4a7);
+            
+        
+
+        marker_1e96bb9aec58f8ffbb42833462fe9788.bindPopup(popup_82d578721f65e560d89d73705f73599f)
+        ;
+
+        
+    
+    
+            marker_1e96bb9aec58f8ffbb42833462fe9788.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 9
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f54292643486f4e2a266294461b8f4a = L.marker(
+                [40.658577, -73.89063],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_5815219dc3d7085a0aa90c8265bcb6e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2f54292643486f4e2a266294461b8f4a.setIcon(icon_5815219dc3d7085a0aa90c8265bcb6e2);
+        
+    
+        var popup_76b282d6c13a050399ad523f45525a9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d77803152b8bf8c1583f7cd31c8dc48b = $(`<div id="html_d77803152b8bf8c1583f7cd31c8dc48b" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 9 CYCLIST KILLED: 1</div>`)[0];
+                popup_76b282d6c13a050399ad523f45525a9d.setContent(html_d77803152b8bf8c1583f7cd31c8dc48b);
+            
+        
+
+        marker_2f54292643486f4e2a266294461b8f4a.bindPopup(popup_76b282d6c13a050399ad523f45525a9d)
+        ;
+
+        
+    
+    
+            marker_2f54292643486f4e2a266294461b8f4a.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 9
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b54c7f6cdd49eb5e2f5a733df1d782ce = L.marker(
+                [40.7107873, -73.9599439],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_7bec5696026985c91eaa79d14a2a01c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b54c7f6cdd49eb5e2f5a733df1d782ce.setIcon(icon_7bec5696026985c91eaa79d14a2a01c0);
+        
+    
+        var popup_76e180b82ac60983e9d60d9290f6fd22 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a6597fe30b6c34179f7de62336fbb5fc = $(`<div id="html_a6597fe30b6c34179f7de62336fbb5fc" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 9 CYCLIST KILLED: 1</div>`)[0];
+                popup_76e180b82ac60983e9d60d9290f6fd22.setContent(html_a6597fe30b6c34179f7de62336fbb5fc);
+            
+        
+
+        marker_b54c7f6cdd49eb5e2f5a733df1d782ce.bindPopup(popup_76e180b82ac60983e9d60d9290f6fd22)
+        ;
+
+        
+    
+    
+            marker_b54c7f6cdd49eb5e2f5a733df1d782ce.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 9
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_273a0c73421aaa3599dd6cc7128e295b = L.marker(
+                [40.707783, -73.932076],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_d2000196a785ea87a638e0314f1b92f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_273a0c73421aaa3599dd6cc7128e295b.setIcon(icon_d2000196a785ea87a638e0314f1b92f9);
+        
+    
+        var popup_2106f17050f283140c50e7551a9b3b39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8551a0653cdf589d6c2991e707863a7c = $(`<div id="html_8551a0653cdf589d6c2991e707863a7c" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 9 CYCLIST KILLED: 1</div>`)[0];
+                popup_2106f17050f283140c50e7551a9b3b39.setContent(html_8551a0653cdf589d6c2991e707863a7c);
+            
+        
+
+        marker_273a0c73421aaa3599dd6cc7128e295b.bindPopup(popup_2106f17050f283140c50e7551a9b3b39)
+        ;
+
+        
+    
+    
+            marker_273a0c73421aaa3599dd6cc7128e295b.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 9
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_629c9acbde91d7ffa2f5c885956cfbd8 = L.marker(
+                [40.814266, -73.912964],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_3b2a81c65901c0d456c000e5c8fed622 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_629c9acbde91d7ffa2f5c885956cfbd8.setIcon(icon_3b2a81c65901c0d456c000e5c8fed622);
+        
+    
+        var popup_e6c9b3d6cf73fb6e48444712d1253ec1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ed7b7293f910d0ceb1db9f282902ef8 = $(`<div id="html_9ed7b7293f910d0ceb1db9f282902ef8" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 9 CYCLIST KILLED: 1</div>`)[0];
+                popup_e6c9b3d6cf73fb6e48444712d1253ec1.setContent(html_9ed7b7293f910d0ceb1db9f282902ef8);
+            
+        
+
+        marker_629c9acbde91d7ffa2f5c885956cfbd8.bindPopup(popup_e6c9b3d6cf73fb6e48444712d1253ec1)
+        ;
+
+        
+    
+    
+            marker_629c9acbde91d7ffa2f5c885956cfbd8.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 9
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1f27920e76cb370385018e72b6a51a0 = L.marker(
+                [40.809105, -73.9229],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_02b365710a8f3cf0a3cecd9535d84737 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c1f27920e76cb370385018e72b6a51a0.setIcon(icon_02b365710a8f3cf0a3cecd9535d84737);
+        
+    
+        var popup_db53744d98b2d6b585a9fdecc344d6dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f52cfe6dfb000017339b6909197fdcc = $(`<div id="html_2f52cfe6dfb000017339b6909197fdcc" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 9 CYCLIST KILLED: 1</div>`)[0];
+                popup_db53744d98b2d6b585a9fdecc344d6dc.setContent(html_2f52cfe6dfb000017339b6909197fdcc);
+            
+        
+
+        marker_c1f27920e76cb370385018e72b6a51a0.bindPopup(popup_db53744d98b2d6b585a9fdecc344d6dc)
+        ;
+
+        
+    
+    
+            marker_c1f27920e76cb370385018e72b6a51a0.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 9
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4dd7d102ccab1465fc7f0121e487964c = L.marker(
+                [40.78858, -73.955284],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_20d51ed5a022c838e963d70b5c87def0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4dd7d102ccab1465fc7f0121e487964c.setIcon(icon_20d51ed5a022c838e963d70b5c87def0);
+        
+    
+        var popup_1358f4c2b050d377afbee3b2fbb59cc1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48d972bb7fbfe588401af5f53b542916 = $(`<div id="html_48d972bb7fbfe588401af5f53b542916" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 8 CYCLIST KILLED: 1</div>`)[0];
+                popup_1358f4c2b050d377afbee3b2fbb59cc1.setContent(html_48d972bb7fbfe588401af5f53b542916);
+            
+        
+
+        marker_4dd7d102ccab1465fc7f0121e487964c.bindPopup(popup_1358f4c2b050d377afbee3b2fbb59cc1)
+        ;
+
+        
+    
+    
+            marker_4dd7d102ccab1465fc7f0121e487964c.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 8
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3ebd426cc2b14442e620ceb714866628 = L.marker(
+                [40.663555, -73.93162],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_fdc41b3a5f381d32ed5a2bb98b2ae794 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3ebd426cc2b14442e620ceb714866628.setIcon(icon_fdc41b3a5f381d32ed5a2bb98b2ae794);
+        
+    
+        var popup_4e7e6c98156050f096146c94ffc28545 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d7871270d5546c805119c69dcaf8ed6 = $(`<div id="html_8d7871270d5546c805119c69dcaf8ed6" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 8 CYCLIST KILLED: 1</div>`)[0];
+                popup_4e7e6c98156050f096146c94ffc28545.setContent(html_8d7871270d5546c805119c69dcaf8ed6);
+            
+        
+
+        marker_3ebd426cc2b14442e620ceb714866628.bindPopup(popup_4e7e6c98156050f096146c94ffc28545)
+        ;
+
+        
+    
+    
+            marker_3ebd426cc2b14442e620ceb714866628.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 8
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f9d1e8fece4af5841370fba416a7e4d = L.marker(
+                [40.784943, -73.946594],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_fc6646ddfd8033516a4f381e777265b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8f9d1e8fece4af5841370fba416a7e4d.setIcon(icon_fc6646ddfd8033516a4f381e777265b6);
+        
+    
+        var popup_a8ad54c0dc156ac01186bc4d263c206d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4cc0c77bd177a6fb3b6b3f5abc202b8d = $(`<div id="html_4cc0c77bd177a6fb3b6b3f5abc202b8d" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 8 CYCLIST KILLED: 1</div>`)[0];
+                popup_a8ad54c0dc156ac01186bc4d263c206d.setContent(html_4cc0c77bd177a6fb3b6b3f5abc202b8d);
+            
+        
+
+        marker_8f9d1e8fece4af5841370fba416a7e4d.bindPopup(popup_a8ad54c0dc156ac01186bc4d263c206d)
+        ;
+
+        
+    
+    
+            marker_8f9d1e8fece4af5841370fba416a7e4d.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 8
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a5f45f79cf32a2c8d74eabf012272eb = L.marker(
+                [40.785294, -73.969345],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_fbe6f99a2d9b405ff23ab30a79a39c72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5a5f45f79cf32a2c8d74eabf012272eb.setIcon(icon_fbe6f99a2d9b405ff23ab30a79a39c72);
+        
+    
+        var popup_2f46fe68a2c0794b45b03fdee91e7808 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ffcbddd2952f547bbb1ecc8fa1468386 = $(`<div id="html_ffcbddd2952f547bbb1ecc8fa1468386" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 8 CYCLIST KILLED: 1</div>`)[0];
+                popup_2f46fe68a2c0794b45b03fdee91e7808.setContent(html_ffcbddd2952f547bbb1ecc8fa1468386);
+            
+        
+
+        marker_5a5f45f79cf32a2c8d74eabf012272eb.bindPopup(popup_2f46fe68a2c0794b45b03fdee91e7808)
+        ;
+
+        
+    
+    
+            marker_5a5f45f79cf32a2c8d74eabf012272eb.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 8
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21122139c2aed5d02709cf2d3c336a87 = L.marker(
+                [40.742706, -73.984535],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_f1b72ef20a7130da90e96ae0824b2cf4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_21122139c2aed5d02709cf2d3c336a87.setIcon(icon_f1b72ef20a7130da90e96ae0824b2cf4);
+        
+    
+        var popup_62b7ab71ac41f9416f9df9c0eba2a55c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a142ef9795d148ef43e6759da33d9721 = $(`<div id="html_a142ef9795d148ef43e6759da33d9721" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 8 CYCLIST KILLED: 1</div>`)[0];
+                popup_62b7ab71ac41f9416f9df9c0eba2a55c.setContent(html_a142ef9795d148ef43e6759da33d9721);
+            
+        
+
+        marker_21122139c2aed5d02709cf2d3c336a87.bindPopup(popup_62b7ab71ac41f9416f9df9c0eba2a55c)
+        ;
+
+        
+    
+    
+            marker_21122139c2aed5d02709cf2d3c336a87.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 8
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b4b30224a4e9571097f9e5f34e040e0 = L.marker(
+                [40.73136, -73.98257],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_fb119f759b42ff30ab92cbfc8112bc4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5b4b30224a4e9571097f9e5f34e040e0.setIcon(icon_fb119f759b42ff30ab92cbfc8112bc4d);
+        
+    
+        var popup_6c52417952e84dc8b13af59a9bc54c02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f983cc6628b2981079da577236a3412 = $(`<div id="html_1f983cc6628b2981079da577236a3412" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 8 CYCLIST KILLED: 1</div>`)[0];
+                popup_6c52417952e84dc8b13af59a9bc54c02.setContent(html_1f983cc6628b2981079da577236a3412);
+            
+        
+
+        marker_5b4b30224a4e9571097f9e5f34e040e0.bindPopup(popup_6c52417952e84dc8b13af59a9bc54c02)
+        ;
+
+        
+    
+    
+            marker_5b4b30224a4e9571097f9e5f34e040e0.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 8
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f617b6c6a8c1846259848579cfe39fb = L.marker(
+                [40.6969863, -73.9352238],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_2cfa514e6408151df5281167b462829c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3f617b6c6a8c1846259848579cfe39fb.setIcon(icon_2cfa514e6408151df5281167b462829c);
+        
+    
+        var popup_b8ed043dc1983351417c19d3c6e992cf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6977b852ccc0c33a0e24121810c169d0 = $(`<div id="html_6977b852ccc0c33a0e24121810c169d0" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 7 CYCLIST KILLED: 1</div>`)[0];
+                popup_b8ed043dc1983351417c19d3c6e992cf.setContent(html_6977b852ccc0c33a0e24121810c169d0);
+            
+        
+
+        marker_3f617b6c6a8c1846259848579cfe39fb.bindPopup(popup_b8ed043dc1983351417c19d3c6e992cf)
+        ;
+
+        
+    
+    
+            marker_3f617b6c6a8c1846259848579cfe39fb.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 7
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b0a16cd8caeba879e268eccc91acf10 = L.marker(
+                [40.759983, -73.964806],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_c7d992e20749d7e40de54a85b81aec57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_5b0a16cd8caeba879e268eccc91acf10.setIcon(icon_c7d992e20749d7e40de54a85b81aec57);
+        
+    
+        var popup_0c253a4484fa140075d0e6aa139519f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_060342ec3229cbb2d2aafbdc606317a7 = $(`<div id="html_060342ec3229cbb2d2aafbdc606317a7" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 27 CYCLIST KILLED: 0</div>`)[0];
+                popup_0c253a4484fa140075d0e6aa139519f9.setContent(html_060342ec3229cbb2d2aafbdc606317a7);
+            
+        
+
+        marker_5b0a16cd8caeba879e268eccc91acf10.bindPopup(popup_0c253a4484fa140075d0e6aa139519f9)
+        ;
+
+        
+    
+    
+            marker_5b0a16cd8caeba879e268eccc91acf10.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 27
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eec902150e84a9836dc9ab122dfebdfb = L.marker(
+                [40.82419, -73.91385],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_55e937f68a04df2ca225ceee9ae50dba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_eec902150e84a9836dc9ab122dfebdfb.setIcon(icon_55e937f68a04df2ca225ceee9ae50dba);
+        
+    
+        var popup_8884621304187e27c09c82c737a13937 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a2745c1e81b5e96fdaf8fdf663f1645 = $(`<div id="html_7a2745c1e81b5e96fdaf8fdf663f1645" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 7 CYCLIST KILLED: 1</div>`)[0];
+                popup_8884621304187e27c09c82c737a13937.setContent(html_7a2745c1e81b5e96fdaf8fdf663f1645);
+            
+        
+
+        marker_eec902150e84a9836dc9ab122dfebdfb.bindPopup(popup_8884621304187e27c09c82c737a13937)
+        ;
+
+        
+    
+    
+            marker_eec902150e84a9836dc9ab122dfebdfb.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 7
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dc64ce7e3c09e7d9a704be1d1004188c = L.marker(
+                [40.607258, -73.96727],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_e90e16417e30b25328ed52f172bfbd6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_dc64ce7e3c09e7d9a704be1d1004188c.setIcon(icon_e90e16417e30b25328ed52f172bfbd6b);
+        
+    
+        var popup_5dcd0e82553aa5ae8b2f21608960c200 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6aa24bc2351a6e5203c5f9eced439573 = $(`<div id="html_6aa24bc2351a6e5203c5f9eced439573" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 7 CYCLIST KILLED: 1</div>`)[0];
+                popup_5dcd0e82553aa5ae8b2f21608960c200.setContent(html_6aa24bc2351a6e5203c5f9eced439573);
+            
+        
+
+        marker_dc64ce7e3c09e7d9a704be1d1004188c.bindPopup(popup_5dcd0e82553aa5ae8b2f21608960c200)
+        ;
+
+        
+    
+    
+            marker_dc64ce7e3c09e7d9a704be1d1004188c.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 7
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9056bff7ae9708602dc3a2e3b522a79a = L.marker(
+                [40.8077723, -73.9454833],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_d1c0992c7962c9c960891851e5e3d6cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9056bff7ae9708602dc3a2e3b522a79a.setIcon(icon_d1c0992c7962c9c960891851e5e3d6cc);
+        
+    
+        var popup_6a1934de34ed6efc1c79a63850d171df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_927decd942be844470d61936f255a140 = $(`<div id="html_927decd942be844470d61936f255a140" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 7 CYCLIST KILLED: 1</div>`)[0];
+                popup_6a1934de34ed6efc1c79a63850d171df.setContent(html_927decd942be844470d61936f255a140);
+            
+        
+
+        marker_9056bff7ae9708602dc3a2e3b522a79a.bindPopup(popup_6a1934de34ed6efc1c79a63850d171df)
+        ;
+
+        
+    
+    
+            marker_9056bff7ae9708602dc3a2e3b522a79a.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 7
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_54b5ece6d86580040654e782f98d3624 = L.marker(
+                [40.671645, -73.9625737],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_6c46764200ee2c11967d468383bb15dd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_54b5ece6d86580040654e782f98d3624.setIcon(icon_6c46764200ee2c11967d468383bb15dd);
+        
+    
+        var popup_639a3103c6713f9ae09da8fd32f00b93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e70b7579e5a88d6c610e49e7d25c40df = $(`<div id="html_e70b7579e5a88d6c610e49e7d25c40df" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 7 CYCLIST KILLED: 1</div>`)[0];
+                popup_639a3103c6713f9ae09da8fd32f00b93.setContent(html_e70b7579e5a88d6c610e49e7d25c40df);
+            
+        
+
+        marker_54b5ece6d86580040654e782f98d3624.bindPopup(popup_639a3103c6713f9ae09da8fd32f00b93)
+        ;
+
+        
+    
+    
+            marker_54b5ece6d86580040654e782f98d3624.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 7
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3a269c9a7e28e7f446541319e66b297f = L.marker(
+                [40.694305, -73.91852],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_f095a235e543896fbc3757eaa5ee53b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3a269c9a7e28e7f446541319e66b297f.setIcon(icon_f095a235e543896fbc3757eaa5ee53b1);
+        
+    
+        var popup_3255619a8cd80feaf2b6c372b3a1f55f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f2e7d8bec33fe3ff3f8a54a506d0fdd = $(`<div id="html_5f2e7d8bec33fe3ff3f8a54a506d0fdd" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 7 CYCLIST KILLED: 1</div>`)[0];
+                popup_3255619a8cd80feaf2b6c372b3a1f55f.setContent(html_5f2e7d8bec33fe3ff3f8a54a506d0fdd);
+            
+        
+
+        marker_3a269c9a7e28e7f446541319e66b297f.bindPopup(popup_3255619a8cd80feaf2b6c372b3a1f55f)
+        ;
+
+        
+    
+    
+            marker_3a269c9a7e28e7f446541319e66b297f.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 7
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9d693334e63afb14a42a037537dfe626 = L.marker(
+                [40.778606, -73.98163],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_6a0e4b5031b0df61d74927741e3e4479 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9d693334e63afb14a42a037537dfe626.setIcon(icon_6a0e4b5031b0df61d74927741e3e4479);
+        
+    
+        var popup_87eda92cb7ac00f315b6369cf23260d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f431349e4313473118e0a0f2bff611b = $(`<div id="html_3f431349e4313473118e0a0f2bff611b" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 7 CYCLIST KILLED: 1</div>`)[0];
+                popup_87eda92cb7ac00f315b6369cf23260d0.setContent(html_3f431349e4313473118e0a0f2bff611b);
+            
+        
+
+        marker_9d693334e63afb14a42a037537dfe626.bindPopup(popup_87eda92cb7ac00f315b6369cf23260d0)
+        ;
+
+        
+    
+    
+            marker_9d693334e63afb14a42a037537dfe626.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 7
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fe592b610e0c6200c11450e6d113a0e4 = L.marker(
+                [40.70113, -73.96087],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_0eb6ee0ccca808f12ce23097d554e995 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fe592b610e0c6200c11450e6d113a0e4.setIcon(icon_0eb6ee0ccca808f12ce23097d554e995);
+        
+    
+        var popup_a868d363097bce91b7671ada6b47b44e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_084ce4885dba112daf7a2113d852f20e = $(`<div id="html_084ce4885dba112daf7a2113d852f20e" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 6 CYCLIST KILLED: 1</div>`)[0];
+                popup_a868d363097bce91b7671ada6b47b44e.setContent(html_084ce4885dba112daf7a2113d852f20e);
+            
+        
+
+        marker_fe592b610e0c6200c11450e6d113a0e4.bindPopup(popup_a868d363097bce91b7671ada6b47b44e)
+        ;
+
+        
+    
+    
+            marker_fe592b610e0c6200c11450e6d113a0e4.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 6
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_677465c6c250c651df755fe4fcd7585f = L.marker(
+                [40.79599, -73.96896],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_5674b863b03cc5b46d27b3823aa61cf5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_677465c6c250c651df755fe4fcd7585f.setIcon(icon_5674b863b03cc5b46d27b3823aa61cf5);
+        
+    
+        var popup_7d01a023a702ad7faa5c2784ae187362 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_210671285896e9c430ba041ab4854be4 = $(`<div id="html_210671285896e9c430ba041ab4854be4" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 6 CYCLIST KILLED: 1</div>`)[0];
+                popup_7d01a023a702ad7faa5c2784ae187362.setContent(html_210671285896e9c430ba041ab4854be4);
+            
+        
+
+        marker_677465c6c250c651df755fe4fcd7585f.bindPopup(popup_7d01a023a702ad7faa5c2784ae187362)
+        ;
+
+        
+    
+    
+            marker_677465c6c250c651df755fe4fcd7585f.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 6
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b67d2c1aa34d49010824235e4dfb40f = L.marker(
+                [40.717186, -74.0129],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_5b04b7c4fd55864774a04b21e4eed9fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4b67d2c1aa34d49010824235e4dfb40f.setIcon(icon_5b04b7c4fd55864774a04b21e4eed9fc);
+        
+    
+        var popup_8fa01d99d43786bf96cc6b3201dc74df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f5b95f4ce31e8b27fac34cb161d28e9 = $(`<div id="html_4f5b95f4ce31e8b27fac34cb161d28e9" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 6 CYCLIST KILLED: 1</div>`)[0];
+                popup_8fa01d99d43786bf96cc6b3201dc74df.setContent(html_4f5b95f4ce31e8b27fac34cb161d28e9);
+            
+        
+
+        marker_4b67d2c1aa34d49010824235e4dfb40f.bindPopup(popup_8fa01d99d43786bf96cc6b3201dc74df)
+        ;
+
+        
+    
+    
+            marker_4b67d2c1aa34d49010824235e4dfb40f.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 6
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_494e5adb813cc62d76fccc2da8afbc25 = L.marker(
+                [40.647068, -73.993935],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_78fc532e49fd08c75873cbb6408090a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_494e5adb813cc62d76fccc2da8afbc25.setIcon(icon_78fc532e49fd08c75873cbb6408090a4);
+        
+    
+        var popup_2a4127ac65ad8cd76ce0f355c98c2636 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d47746a2101b4596991a7bf3c137f12 = $(`<div id="html_3d47746a2101b4596991a7bf3c137f12" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 6 CYCLIST KILLED: 1</div>`)[0];
+                popup_2a4127ac65ad8cd76ce0f355c98c2636.setContent(html_3d47746a2101b4596991a7bf3c137f12);
+            
+        
+
+        marker_494e5adb813cc62d76fccc2da8afbc25.bindPopup(popup_2a4127ac65ad8cd76ce0f355c98c2636)
+        ;
+
+        
+    
+    
+            marker_494e5adb813cc62d76fccc2da8afbc25.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 6
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_36f7a691e2586d0efc6a7289d68ddd3c = L.marker(
+                [40.61462, -73.968666],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_6457d44e6e75f15712e061e15b41d09d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_36f7a691e2586d0efc6a7289d68ddd3c.setIcon(icon_6457d44e6e75f15712e061e15b41d09d);
+        
+    
+        var popup_86d17282ead551b740121c760a1f7396 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f03f7b3590ffec892c93df1ba1e802d0 = $(`<div id="html_f03f7b3590ffec892c93df1ba1e802d0" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 6 CYCLIST KILLED: 1</div>`)[0];
+                popup_86d17282ead551b740121c760a1f7396.setContent(html_f03f7b3590ffec892c93df1ba1e802d0);
+            
+        
+
+        marker_36f7a691e2586d0efc6a7289d68ddd3c.bindPopup(popup_86d17282ead551b740121c760a1f7396)
+        ;
+
+        
+    
+    
+            marker_36f7a691e2586d0efc6a7289d68ddd3c.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 6
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c8db2da68597936a305c354e19e19e2 = L.marker(
+                [40.753242, -73.96662],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_16236fea003fb50570ae8a87f0a13804 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4c8db2da68597936a305c354e19e19e2.setIcon(icon_16236fea003fb50570ae8a87f0a13804);
+        
+    
+        var popup_283d116b74b2f81269e19271e6927ce0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4f5aefa9825836b3865fef5f060f397 = $(`<div id="html_c4f5aefa9825836b3865fef5f060f397" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 26 CYCLIST KILLED: 0</div>`)[0];
+                popup_283d116b74b2f81269e19271e6927ce0.setContent(html_c4f5aefa9825836b3865fef5f060f397);
+            
+        
+
+        marker_4c8db2da68597936a305c354e19e19e2.bindPopup(popup_283d116b74b2f81269e19271e6927ce0)
+        ;
+
+        
+    
+    
+            marker_4c8db2da68597936a305c354e19e19e2.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 26
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f9bc1e557112a2c203b3690579bb2c2 = L.marker(
+                [40.672604, -73.993385],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_99d1f76418694c95c731576fce0ab8c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3f9bc1e557112a2c203b3690579bb2c2.setIcon(icon_99d1f76418694c95c731576fce0ab8c3);
+        
+    
+        var popup_6f35f59b1970369fa91287327c7dfeed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d325118fb419ff35c525c66947d06475 = $(`<div id="html_d325118fb419ff35c525c66947d06475" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 6 CYCLIST KILLED: 1</div>`)[0];
+                popup_6f35f59b1970369fa91287327c7dfeed.setContent(html_d325118fb419ff35c525c66947d06475);
+            
+        
+
+        marker_3f9bc1e557112a2c203b3690579bb2c2.bindPopup(popup_6f35f59b1970369fa91287327c7dfeed)
+        ;
+
+        
+    
+    
+            marker_3f9bc1e557112a2c203b3690579bb2c2.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 6
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2a68e7d1141daea4d26d7edd91fbc44e = L.marker(
+                [40.643063, -73.95166],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_aa265a5889e819e6e1132d6daf4c08f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2a68e7d1141daea4d26d7edd91fbc44e.setIcon(icon_aa265a5889e819e6e1132d6daf4c08f0);
+        
+    
+        var popup_ff7c06c168d5fb60f49a13d1194907b2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff727b81f238e7529d19230ad475788b = $(`<div id="html_ff727b81f238e7529d19230ad475788b" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 6 CYCLIST KILLED: 1</div>`)[0];
+                popup_ff7c06c168d5fb60f49a13d1194907b2.setContent(html_ff727b81f238e7529d19230ad475788b);
+            
+        
+
+        marker_2a68e7d1141daea4d26d7edd91fbc44e.bindPopup(popup_ff7c06c168d5fb60f49a13d1194907b2)
+        ;
+
+        
+    
+    
+            marker_2a68e7d1141daea4d26d7edd91fbc44e.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 6
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d03d9639a3ca05af6fbb056e9632aab = L.marker(
+                [40.767815, -73.98951],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_c991c69f46ee6a5eb8318075bc5f5e79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0d03d9639a3ca05af6fbb056e9632aab.setIcon(icon_c991c69f46ee6a5eb8318075bc5f5e79);
+        
+    
+        var popup_f183b2c5cda5e043eeabcd68c1dbe980 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a39ca52c38d73d8e4c14d2101ef702d5 = $(`<div id="html_a39ca52c38d73d8e4c14d2101ef702d5" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 6 CYCLIST KILLED: 1</div>`)[0];
+                popup_f183b2c5cda5e043eeabcd68c1dbe980.setContent(html_a39ca52c38d73d8e4c14d2101ef702d5);
+            
+        
+
+        marker_0d03d9639a3ca05af6fbb056e9632aab.bindPopup(popup_f183b2c5cda5e043eeabcd68c1dbe980)
+        ;
+
+        
+    
+    
+            marker_0d03d9639a3ca05af6fbb056e9632aab.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 6
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b140638adfbf8a8190509469ba3bfcbe = L.marker(
+                [40.8786453, -73.871598],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_1996f094fa7004f455e4fea2f0acd4ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b140638adfbf8a8190509469ba3bfcbe.setIcon(icon_1996f094fa7004f455e4fea2f0acd4ec);
+        
+    
+        var popup_32c20211216b27e2701ee9fdbe55316c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1821afeed51e5f502cdc856e5b0eb4e4 = $(`<div id="html_1821afeed51e5f502cdc856e5b0eb4e4" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_32c20211216b27e2701ee9fdbe55316c.setContent(html_1821afeed51e5f502cdc856e5b0eb4e4);
+            
+        
+
+        marker_b140638adfbf8a8190509469ba3bfcbe.bindPopup(popup_32c20211216b27e2701ee9fdbe55316c)
+        ;
+
+        
+    
+    
+            marker_b140638adfbf8a8190509469ba3bfcbe.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f81d79fa29d9ccff49e180d715a0dabd = L.marker(
+                [40.75326, -74.00383],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_d0e9ae7db30c75fe90893ae3a3c1b690 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f81d79fa29d9ccff49e180d715a0dabd.setIcon(icon_d0e9ae7db30c75fe90893ae3a3c1b690);
+        
+    
+        var popup_820a359c4d0f9b70bac52217913322f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cba067db76f3fd317842aa21d85cd103 = $(`<div id="html_cba067db76f3fd317842aa21d85cd103" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_820a359c4d0f9b70bac52217913322f3.setContent(html_cba067db76f3fd317842aa21d85cd103);
+            
+        
+
+        marker_f81d79fa29d9ccff49e180d715a0dabd.bindPopup(popup_820a359c4d0f9b70bac52217913322f3)
+        ;
+
+        
+    
+    
+            marker_f81d79fa29d9ccff49e180d715a0dabd.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_83208ee72fe7b1bdd6bc2583bb390c48 = L.marker(
+                [40.850906, -73.93829],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_e127a26dfa4e3d173b3755a206d1e0aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_83208ee72fe7b1bdd6bc2583bb390c48.setIcon(icon_e127a26dfa4e3d173b3755a206d1e0aa);
+        
+    
+        var popup_2f29ac94c047f793939d7b6e5d727958 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8e0d91b2c19e200ec26555485f820b19 = $(`<div id="html_8e0d91b2c19e200ec26555485f820b19" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_2f29ac94c047f793939d7b6e5d727958.setContent(html_8e0d91b2c19e200ec26555485f820b19);
+            
+        
+
+        marker_83208ee72fe7b1bdd6bc2583bb390c48.bindPopup(popup_2f29ac94c047f793939d7b6e5d727958)
+        ;
+
+        
+    
+    
+            marker_83208ee72fe7b1bdd6bc2583bb390c48.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1a87427805caccdd8832cb29ac6da6e1 = L.marker(
+                [40.643456, -73.972725],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_2354849d0bba35266f530e94493e5930 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1a87427805caccdd8832cb29ac6da6e1.setIcon(icon_2354849d0bba35266f530e94493e5930);
+        
+    
+        var popup_992578472ad0076b78ca84718c4c827e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c2e49292d73c7c5ead1974bd251ef51c = $(`<div id="html_c2e49292d73c7c5ead1974bd251ef51c" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_992578472ad0076b78ca84718c4c827e.setContent(html_c2e49292d73c7c5ead1974bd251ef51c);
+            
+        
+
+        marker_1a87427805caccdd8832cb29ac6da6e1.bindPopup(popup_992578472ad0076b78ca84718c4c827e)
+        ;
+
+        
+    
+    
+            marker_1a87427805caccdd8832cb29ac6da6e1.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c0bbfd1352d8f29af646e5e58da63291 = L.marker(
+                [40.814934, -73.91496],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_3473591c5e03552c6f4c0a17a88796f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c0bbfd1352d8f29af646e5e58da63291.setIcon(icon_3473591c5e03552c6f4c0a17a88796f8);
+        
+    
+        var popup_1a81d9d398ec75dc9b050872bd76a522 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f1f64cd44ace6edde093ab7038ef5ac = $(`<div id="html_3f1f64cd44ace6edde093ab7038ef5ac" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_1a81d9d398ec75dc9b050872bd76a522.setContent(html_3f1f64cd44ace6edde093ab7038ef5ac);
+            
+        
+
+        marker_c0bbfd1352d8f29af646e5e58da63291.bindPopup(popup_1a81d9d398ec75dc9b050872bd76a522)
+        ;
+
+        
+    
+    
+            marker_c0bbfd1352d8f29af646e5e58da63291.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8df4f2f65c671a4168cc70bb2a5c5af5 = L.marker(
+                [40.728195, -73.984886],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_2140a3c50e43452d7be71f035a96c458 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8df4f2f65c671a4168cc70bb2a5c5af5.setIcon(icon_2140a3c50e43452d7be71f035a96c458);
+        
+    
+        var popup_72f2d66698163ac5c2fed52b620bc8a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf4ae58fea1bf913e4150f19f5309680 = $(`<div id="html_bf4ae58fea1bf913e4150f19f5309680" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_72f2d66698163ac5c2fed52b620bc8a9.setContent(html_bf4ae58fea1bf913e4150f19f5309680);
+            
+        
+
+        marker_8df4f2f65c671a4168cc70bb2a5c5af5.bindPopup(popup_72f2d66698163ac5c2fed52b620bc8a9)
+        ;
+
+        
+    
+    
+            marker_8df4f2f65c671a4168cc70bb2a5c5af5.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6465166ebd24031b20581903b2746096 = L.marker(
+                [40.845985, -73.884476],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_f80327d39c793fb7ecb0fa05deb173e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6465166ebd24031b20581903b2746096.setIcon(icon_f80327d39c793fb7ecb0fa05deb173e8);
+        
+    
+        var popup_5d759701613610f9fce48b5dd17f4291 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f09fb72dda9e4a39c0a9d827bede84e = $(`<div id="html_3f09fb72dda9e4a39c0a9d827bede84e" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_5d759701613610f9fce48b5dd17f4291.setContent(html_3f09fb72dda9e4a39c0a9d827bede84e);
+            
+        
+
+        marker_6465166ebd24031b20581903b2746096.bindPopup(popup_5d759701613610f9fce48b5dd17f4291)
+        ;
+
+        
+    
+    
+            marker_6465166ebd24031b20581903b2746096.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68ff34a74c424b615400141e88fe9aec = L.marker(
+                [40.650806, -73.94958],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_7f625e1d7aca7c6ab715191f3c196b66 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_68ff34a74c424b615400141e88fe9aec.setIcon(icon_7f625e1d7aca7c6ab715191f3c196b66);
+        
+    
+        var popup_d9db92e4c0f48cd7fcfaa677f7e1b463 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6748526ab19daf00bef2c4e89801e238 = $(`<div id="html_6748526ab19daf00bef2c4e89801e238" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_d9db92e4c0f48cd7fcfaa677f7e1b463.setContent(html_6748526ab19daf00bef2c4e89801e238);
+            
+        
+
+        marker_68ff34a74c424b615400141e88fe9aec.bindPopup(popup_d9db92e4c0f48cd7fcfaa677f7e1b463)
+        ;
+
+        
+    
+    
+            marker_68ff34a74c424b615400141e88fe9aec.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec72ac04bf219907e4e30d47029aa110 = L.marker(
+                [40.7207095, -73.9813092],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_dc603fcffaed828c7d6d1d677a4bc684 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ec72ac04bf219907e4e30d47029aa110.setIcon(icon_dc603fcffaed828c7d6d1d677a4bc684);
+        
+    
+        var popup_e63b5dbb6ab183ce4bc0f3ef9fd34b53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c32e9d100a40e14a7e266612df63dde4 = $(`<div id="html_c32e9d100a40e14a7e266612df63dde4" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_e63b5dbb6ab183ce4bc0f3ef9fd34b53.setContent(html_c32e9d100a40e14a7e266612df63dde4);
+            
+        
+
+        marker_ec72ac04bf219907e4e30d47029aa110.bindPopup(popup_e63b5dbb6ab183ce4bc0f3ef9fd34b53)
+        ;
+
+        
+    
+    
+            marker_ec72ac04bf219907e4e30d47029aa110.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61fad1aaf3334819bf90b4ed458e5d1d = L.marker(
+                [40.812622, -73.92934],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_5bad02f0bf3d7b5053e08e16024fbd45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_61fad1aaf3334819bf90b4ed458e5d1d.setIcon(icon_5bad02f0bf3d7b5053e08e16024fbd45);
+        
+    
+        var popup_b587cb99b058f657d5c3be3cd7652b38 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8bc099802e650999eb98808cde2ff07c = $(`<div id="html_8bc099802e650999eb98808cde2ff07c" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 5 CYCLIST KILLED: 1</div>`)[0];
+                popup_b587cb99b058f657d5c3be3cd7652b38.setContent(html_8bc099802e650999eb98808cde2ff07c);
+            
+        
+
+        marker_61fad1aaf3334819bf90b4ed458e5d1d.bindPopup(popup_b587cb99b058f657d5c3be3cd7652b38)
+        ;
+
+        
+    
+    
+            marker_61fad1aaf3334819bf90b4ed458e5d1d.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 5
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0eebadaa1aa58c884b03a1a5391ac694 = L.marker(
+                [40.751892, -73.9676],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_2338fc9980fc6b35a8be3163254f6697 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0eebadaa1aa58c884b03a1a5391ac694.setIcon(icon_2338fc9980fc6b35a8be3163254f6697);
+        
+    
+        var popup_1ec50a43c1a597358ad97edca3042c86 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09cc23e87f6b66ae7c0e67e49eac5bcf = $(`<div id="html_09cc23e87f6b66ae7c0e67e49eac5bcf" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_1ec50a43c1a597358ad97edca3042c86.setContent(html_09cc23e87f6b66ae7c0e67e49eac5bcf);
+            
+        
+
+        marker_0eebadaa1aa58c884b03a1a5391ac694.bindPopup(popup_1ec50a43c1a597358ad97edca3042c86)
+        ;
+
+        
+    
+    
+            marker_0eebadaa1aa58c884b03a1a5391ac694.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f341a3c391f1607c48c9e7afb7de4c1 = L.marker(
+                [40.716194, -73.996086],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_ad17c9ee102cca8cd4756d93ffdd5556 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_3f341a3c391f1607c48c9e7afb7de4c1.setIcon(icon_ad17c9ee102cca8cd4756d93ffdd5556);
+        
+    
+        var popup_07ac39f408ab0d9624ed2814820157d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c55ecbced831444e81b7ffe15b8c5147 = $(`<div id="html_c55ecbced831444e81b7ffe15b8c5147" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_07ac39f408ab0d9624ed2814820157d6.setContent(html_c55ecbced831444e81b7ffe15b8c5147);
+            
+        
+
+        marker_3f341a3c391f1607c48c9e7afb7de4c1.bindPopup(popup_07ac39f408ab0d9624ed2814820157d6)
+        ;
+
+        
+    
+    
+            marker_3f341a3c391f1607c48c9e7afb7de4c1.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_acd54badaf43c371bde6efe574f3326a = L.marker(
+                [40.772415, -73.97874],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_020ee7a20e9101109d8bb65b4960eac4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_acd54badaf43c371bde6efe574f3326a.setIcon(icon_020ee7a20e9101109d8bb65b4960eac4);
+        
+    
+        var popup_bb2b6f62c604d9ba21925a0f18cd4c8a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e38e9b275516ac15cfba55de5503f6b3 = $(`<div id="html_e38e9b275516ac15cfba55de5503f6b3" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_bb2b6f62c604d9ba21925a0f18cd4c8a.setContent(html_e38e9b275516ac15cfba55de5503f6b3);
+            
+        
+
+        marker_acd54badaf43c371bde6efe574f3326a.bindPopup(popup_bb2b6f62c604d9ba21925a0f18cd4c8a)
+        ;
+
+        
+    
+    
+            marker_acd54badaf43c371bde6efe574f3326a.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bb5b99442e19e87142dbfc2850b312ff = L.marker(
+                [40.747852, -73.99291],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_aca50510d89eb55ee1bff043a3e6534f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_bb5b99442e19e87142dbfc2850b312ff.setIcon(icon_aca50510d89eb55ee1bff043a3e6534f);
+        
+    
+        var popup_ef7c68f83e1aeee600bb2cf1b0292213 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d156447ca1c73c8f1b999c82a2a8eb8 = $(`<div id="html_4d156447ca1c73c8f1b999c82a2a8eb8" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_ef7c68f83e1aeee600bb2cf1b0292213.setContent(html_4d156447ca1c73c8f1b999c82a2a8eb8);
+            
+        
+
+        marker_bb5b99442e19e87142dbfc2850b312ff.bindPopup(popup_ef7c68f83e1aeee600bb2cf1b0292213)
+        ;
+
+        
+    
+    
+            marker_bb5b99442e19e87142dbfc2850b312ff.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e90749ffb2d7e0a168f1ad84dc299681 = L.marker(
+                [40.70801, -73.95673],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_c6886c87d02c7d2fad3b77966b5d5b9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e90749ffb2d7e0a168f1ad84dc299681.setIcon(icon_c6886c87d02c7d2fad3b77966b5d5b9f);
+        
+    
+        var popup_d6ab8544d5f32d07c12dc3665857bcda = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d80d3a32e892fcff4aa35f7881a29db = $(`<div id="html_5d80d3a32e892fcff4aa35f7881a29db" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_d6ab8544d5f32d07c12dc3665857bcda.setContent(html_5d80d3a32e892fcff4aa35f7881a29db);
+            
+        
+
+        marker_e90749ffb2d7e0a168f1ad84dc299681.bindPopup(popup_d6ab8544d5f32d07c12dc3665857bcda)
+        ;
+
+        
+    
+    
+            marker_e90749ffb2d7e0a168f1ad84dc299681.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_65b608a4570e3103e456a5b3ea5d2671 = L.marker(
+                [40.663517, -73.957214],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_524858a2c52d3b8d145748071fca2d85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_65b608a4570e3103e456a5b3ea5d2671.setIcon(icon_524858a2c52d3b8d145748071fca2d85);
+        
+    
+        var popup_8cdb1ed7b20f33bd8bfdb927764fee4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b401391577e0811aacdaa701f8024072 = $(`<div id="html_b401391577e0811aacdaa701f8024072" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 24 CYCLIST KILLED: 0</div>`)[0];
+                popup_8cdb1ed7b20f33bd8bfdb927764fee4d.setContent(html_b401391577e0811aacdaa701f8024072);
+            
+        
+
+        marker_65b608a4570e3103e456a5b3ea5d2671.bindPopup(popup_8cdb1ed7b20f33bd8bfdb927764fee4d)
+        ;
+
+        
+    
+    
+            marker_65b608a4570e3103e456a5b3ea5d2671.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 24
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d89fa6f2db933815f1c5c9110464903 = L.marker(
+                [40.704113, -73.94786],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_ba17ef4194381a03e97881fd4d073031 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2d89fa6f2db933815f1c5c9110464903.setIcon(icon_ba17ef4194381a03e97881fd4d073031);
+        
+    
+        var popup_4856af0eabfa96c0a3893fb334470ac3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d01abf8689dfcbb7a7f135c61a3ea68b = $(`<div id="html_d01abf8689dfcbb7a7f135c61a3ea68b" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_4856af0eabfa96c0a3893fb334470ac3.setContent(html_d01abf8689dfcbb7a7f135c61a3ea68b);
+            
+        
+
+        marker_2d89fa6f2db933815f1c5c9110464903.bindPopup(popup_4856af0eabfa96c0a3893fb334470ac3)
+        ;
+
+        
+    
+    
+            marker_2d89fa6f2db933815f1c5c9110464903.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_05422423b0797f83575e5e789f582558 = L.marker(
+                [40.780174, -73.95932],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_881e7d6958aea6dadc3f6cab44ea36c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_05422423b0797f83575e5e789f582558.setIcon(icon_881e7d6958aea6dadc3f6cab44ea36c8);
+        
+    
+        var popup_6e7eee1f285297f9d942f6f082db6fc6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26598a2e61f3464d40803caa2ad96c12 = $(`<div id="html_26598a2e61f3464d40803caa2ad96c12" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_6e7eee1f285297f9d942f6f082db6fc6.setContent(html_26598a2e61f3464d40803caa2ad96c12);
+            
+        
+
+        marker_05422423b0797f83575e5e789f582558.bindPopup(popup_6e7eee1f285297f9d942f6f082db6fc6)
+        ;
+
+        
+    
+    
+            marker_05422423b0797f83575e5e789f582558.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d9422097df8a72371fbd04cf6a002058 = L.marker(
+                [40.70621, -73.939606],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_f589e86a1cfea14c3a9b12f86be8a15b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d9422097df8a72371fbd04cf6a002058.setIcon(icon_f589e86a1cfea14c3a9b12f86be8a15b);
+        
+    
+        var popup_bdd4c2bbc5d59f50fa2b186109a9eeae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2182a1402894af33b2492f7253afa517 = $(`<div id="html_2182a1402894af33b2492f7253afa517" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_bdd4c2bbc5d59f50fa2b186109a9eeae.setContent(html_2182a1402894af33b2492f7253afa517);
+            
+        
+
+        marker_d9422097df8a72371fbd04cf6a002058.bindPopup(popup_bdd4c2bbc5d59f50fa2b186109a9eeae)
+        ;
+
+        
+    
+    
+            marker_d9422097df8a72371fbd04cf6a002058.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8b89ae171d938921f0dfeceb96fbd2a7 = L.marker(
+                [40.797306, -73.93446],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_ea451ed9d9d21bd94abe3e2336f0c20d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8b89ae171d938921f0dfeceb96fbd2a7.setIcon(icon_ea451ed9d9d21bd94abe3e2336f0c20d);
+        
+    
+        var popup_213c44f37abc7dbe66be2d31981a4fb5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_512ed3a7619c63aeabb296562094f168 = $(`<div id="html_512ed3a7619c63aeabb296562094f168" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_213c44f37abc7dbe66be2d31981a4fb5.setContent(html_512ed3a7619c63aeabb296562094f168);
+            
+        
+
+        marker_8b89ae171d938921f0dfeceb96fbd2a7.bindPopup(popup_213c44f37abc7dbe66be2d31981a4fb5)
+        ;
+
+        
+    
+    
+            marker_8b89ae171d938921f0dfeceb96fbd2a7.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f90ad7bb9d1a7f762fb93cada0914db2 = L.marker(
+                [40.698677, -73.9588584],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_48f828d72d20000cf8b605575a36a59f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f90ad7bb9d1a7f762fb93cada0914db2.setIcon(icon_48f828d72d20000cf8b605575a36a59f);
+        
+    
+        var popup_9d9961a42c514de54809b79ebc18677d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f797a05e5c41cdb340be6b6e16ecee2 = $(`<div id="html_5f797a05e5c41cdb340be6b6e16ecee2" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_9d9961a42c514de54809b79ebc18677d.setContent(html_5f797a05e5c41cdb340be6b6e16ecee2);
+            
+        
+
+        marker_f90ad7bb9d1a7f762fb93cada0914db2.bindPopup(popup_9d9961a42c514de54809b79ebc18677d)
+        ;
+
+        
+    
+    
+            marker_f90ad7bb9d1a7f762fb93cada0914db2.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0a324f92eff0532e7947a55927a2264e = L.marker(
+                [40.641953, -73.9885],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_9ffe43aee8cd1dad08238cd45871ac85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0a324f92eff0532e7947a55927a2264e.setIcon(icon_9ffe43aee8cd1dad08238cd45871ac85);
+        
+    
+        var popup_dba39ba7c73f3eef22a2636e27641f22 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c3980a3fa0eb0b680122b9a312a6c1c5 = $(`<div id="html_c3980a3fa0eb0b680122b9a312a6c1c5" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_dba39ba7c73f3eef22a2636e27641f22.setContent(html_c3980a3fa0eb0b680122b9a312a6c1c5);
+            
+        
+
+        marker_0a324f92eff0532e7947a55927a2264e.bindPopup(popup_dba39ba7c73f3eef22a2636e27641f22)
+        ;
+
+        
+    
+    
+            marker_0a324f92eff0532e7947a55927a2264e.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_73ce129e98a6e854102863c28da81bda = L.marker(
+                [40.740913, -73.95226],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_21136569c2aa80615944a0dea54fd6c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_73ce129e98a6e854102863c28da81bda.setIcon(icon_21136569c2aa80615944a0dea54fd6c3);
+        
+    
+        var popup_64cf01964c19fc6c1ed52e300b1557f3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c1fa117a7027d9abed70cbb18e7cc1e = $(`<div id="html_3c1fa117a7027d9abed70cbb18e7cc1e" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 4 CYCLIST KILLED: 1</div>`)[0];
+                popup_64cf01964c19fc6c1ed52e300b1557f3.setContent(html_3c1fa117a7027d9abed70cbb18e7cc1e);
+            
+        
+
+        marker_73ce129e98a6e854102863c28da81bda.bindPopup(popup_64cf01964c19fc6c1ed52e300b1557f3)
+        ;
+
+        
+    
+    
+            marker_73ce129e98a6e854102863c28da81bda.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 4
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9ff00607c91f4a918e1f602acae0027a = L.marker(
+                [40.747204, -73.99711],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_7fd3f25114de88b450e06f812901ff85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9ff00607c91f4a918e1f602acae0027a.setIcon(icon_7fd3f25114de88b450e06f812901ff85);
+        
+    
+        var popup_d85ef064b3eccfeb85667643d00507c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cf5fcca77b91dc5d41a5f72fe680ffd = $(`<div id="html_2cf5fcca77b91dc5d41a5f72fe680ffd" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_d85ef064b3eccfeb85667643d00507c6.setContent(html_2cf5fcca77b91dc5d41a5f72fe680ffd);
+            
+        
+
+        marker_9ff00607c91f4a918e1f602acae0027a.bindPopup(popup_d85ef064b3eccfeb85667643d00507c6)
+        ;
+
+        
+    
+    
+            marker_9ff00607c91f4a918e1f602acae0027a.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cf7cddc5df6691eb0742b207ea5b2d22 = L.marker(
+                [40.8050573, -73.9390342],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_ee430133f4b0286f04c5623a9af586db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cf7cddc5df6691eb0742b207ea5b2d22.setIcon(icon_ee430133f4b0286f04c5623a9af586db);
+        
+    
+        var popup_bae891a89b4e07a1db54b639d69f7199 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_acebb5063c9dbfc9d23b475de435d49c = $(`<div id="html_acebb5063c9dbfc9d23b475de435d49c" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_bae891a89b4e07a1db54b639d69f7199.setContent(html_acebb5063c9dbfc9d23b475de435d49c);
+            
+        
+
+        marker_cf7cddc5df6691eb0742b207ea5b2d22.bindPopup(popup_bae891a89b4e07a1db54b639d69f7199)
+        ;
+
+        
+    
+    
+            marker_cf7cddc5df6691eb0742b207ea5b2d22.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_10e1ec5fd226601dfb8bb080896be1ad = L.marker(
+                [40.586746, -73.81712],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_53270d17b88a498aa70b309f5c6cf1d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_10e1ec5fd226601dfb8bb080896be1ad.setIcon(icon_53270d17b88a498aa70b309f5c6cf1d7);
+        
+    
+        var popup_7577583e4065e6190b405a068f9f7fac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_152eea4cb3361dd4f7b0b03d86cfca72 = $(`<div id="html_152eea4cb3361dd4f7b0b03d86cfca72" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_7577583e4065e6190b405a068f9f7fac.setContent(html_152eea4cb3361dd4f7b0b03d86cfca72);
+            
+        
+
+        marker_10e1ec5fd226601dfb8bb080896be1ad.bindPopup(popup_7577583e4065e6190b405a068f9f7fac)
+        ;
+
+        
+    
+    
+            marker_10e1ec5fd226601dfb8bb080896be1ad.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_edb4065419c6bc0577182a69961b0df9 = L.marker(
+                [40.8359271, -73.9029039],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_7152208799edb8a47432282ea6160f05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_edb4065419c6bc0577182a69961b0df9.setIcon(icon_7152208799edb8a47432282ea6160f05);
+        
+    
+        var popup_9a9af5a7a4b9c92813a4774907161550 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a017c3f321da02109c3544638bd5bd7 = $(`<div id="html_7a017c3f321da02109c3544638bd5bd7" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_9a9af5a7a4b9c92813a4774907161550.setContent(html_7a017c3f321da02109c3544638bd5bd7);
+            
+        
+
+        marker_edb4065419c6bc0577182a69961b0df9.bindPopup(popup_9a9af5a7a4b9c92813a4774907161550)
+        ;
+
+        
+    
+    
+            marker_edb4065419c6bc0577182a69961b0df9.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0ea704cfc0e357940eb0ec884a3417f = L.marker(
+                [40.64479, -74.01433],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_599796951278c6cd9e2eb73bc754f30a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b0ea704cfc0e357940eb0ec884a3417f.setIcon(icon_599796951278c6cd9e2eb73bc754f30a);
+        
+    
+        var popup_4a80ab2fb7635fe00738b0060161a7c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25f52367c9a826a686c9734242efeb35 = $(`<div id="html_25f52367c9a826a686c9734242efeb35" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_4a80ab2fb7635fe00738b0060161a7c3.setContent(html_25f52367c9a826a686c9734242efeb35);
+            
+        
+
+        marker_b0ea704cfc0e357940eb0ec884a3417f.bindPopup(popup_4a80ab2fb7635fe00738b0060161a7c3)
+        ;
+
+        
+    
+    
+            marker_b0ea704cfc0e357940eb0ec884a3417f.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1b90e2a335b347ab74f57604c072cb8 = L.marker(
+                [40.65616, -73.76736],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_a2edc3df6548c540e9302bc41b46f67c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c1b90e2a335b347ab74f57604c072cb8.setIcon(icon_a2edc3df6548c540e9302bc41b46f67c);
+        
+    
+        var popup_30d4b2fbc2ee1189c5493e3f4a579292 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7da33d86e77f2e1f75079e97faf53caf = $(`<div id="html_7da33d86e77f2e1f75079e97faf53caf" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_30d4b2fbc2ee1189c5493e3f4a579292.setContent(html_7da33d86e77f2e1f75079e97faf53caf);
+            
+        
+
+        marker_c1b90e2a335b347ab74f57604c072cb8.bindPopup(popup_30d4b2fbc2ee1189c5493e3f4a579292)
+        ;
+
+        
+    
+    
+            marker_c1b90e2a335b347ab74f57604c072cb8.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_89b1fe41ca64553be9db5f0a4e88b5e6 = L.marker(
+                [40.619984, -73.96427],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_c6a5f0c761128075f8ca2509516d8e94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_89b1fe41ca64553be9db5f0a4e88b5e6.setIcon(icon_c6a5f0c761128075f8ca2509516d8e94);
+        
+    
+        var popup_8b8928ef86a3297e2cdd6e1733d47bbc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0f79d2cb916a508fcd436c1c6360c33 = $(`<div id="html_d0f79d2cb916a508fcd436c1c6360c33" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_8b8928ef86a3297e2cdd6e1733d47bbc.setContent(html_d0f79d2cb916a508fcd436c1c6360c33);
+            
+        
+
+        marker_89b1fe41ca64553be9db5f0a4e88b5e6.bindPopup(popup_8b8928ef86a3297e2cdd6e1733d47bbc)
+        ;
+
+        
+    
+    
+            marker_89b1fe41ca64553be9db5f0a4e88b5e6.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_df5b7297bed932f2afe328fb57c8636b = L.marker(
+                [40.74595, -73.99802],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_56d18013954d071e0d49218875d7a589 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_df5b7297bed932f2afe328fb57c8636b.setIcon(icon_56d18013954d071e0d49218875d7a589);
+        
+    
+        var popup_adb490591ef9580c28402cbed6bb2ab2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f9fdfa874b4d1a8a8a43baaa9ea997d = $(`<div id="html_2f9fdfa874b4d1a8a8a43baaa9ea997d" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_adb490591ef9580c28402cbed6bb2ab2.setContent(html_2f9fdfa874b4d1a8a8a43baaa9ea997d);
+            
+        
+
+        marker_df5b7297bed932f2afe328fb57c8636b.bindPopup(popup_adb490591ef9580c28402cbed6bb2ab2)
+        ;
+
+        
+    
+    
+            marker_df5b7297bed932f2afe328fb57c8636b.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ed11b09b40254d21632741bd3415560b = L.marker(
+                [40.72857, -73.85809],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_ee3b222b68453f5b790cb9c24b4a3446 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ed11b09b40254d21632741bd3415560b.setIcon(icon_ee3b222b68453f5b790cb9c24b4a3446);
+        
+    
+        var popup_249e1371a778e91e9f284d67580a6593 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_280ab80bc3bbe7082a825a0dc56617c7 = $(`<div id="html_280ab80bc3bbe7082a825a0dc56617c7" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_249e1371a778e91e9f284d67580a6593.setContent(html_280ab80bc3bbe7082a825a0dc56617c7);
+            
+        
+
+        marker_ed11b09b40254d21632741bd3415560b.bindPopup(popup_249e1371a778e91e9f284d67580a6593)
+        ;
+
+        
+    
+    
+            marker_ed11b09b40254d21632741bd3415560b.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_81b6bc72fb5b54d23f5d1aeee06b559d = L.marker(
+                [40.6831278, -73.9791852],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_5b772ad13b35c5e62906b6401c2ba3ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_81b6bc72fb5b54d23f5d1aeee06b559d.setIcon(icon_5b772ad13b35c5e62906b6401c2ba3ba);
+        
+    
+        var popup_4461d7f80c1d1624fdb8da50d9577f58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9f21043e5211184ac5ffe93e540d063 = $(`<div id="html_f9f21043e5211184ac5ffe93e540d063" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_4461d7f80c1d1624fdb8da50d9577f58.setContent(html_f9f21043e5211184ac5ffe93e540d063);
+            
+        
+
+        marker_81b6bc72fb5b54d23f5d1aeee06b559d.bindPopup(popup_4461d7f80c1d1624fdb8da50d9577f58)
+        ;
+
+        
+    
+    
+            marker_81b6bc72fb5b54d23f5d1aeee06b559d.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b25f005f2f0ea3d5eae4b5af58b39811 = L.marker(
+                [40.76465, -73.823494],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_e7edb6c753c757c4a86c17e44a68f47b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b25f005f2f0ea3d5eae4b5af58b39811.setIcon(icon_e7edb6c753c757c4a86c17e44a68f47b);
+        
+    
+        var popup_00e44336aad1d426e02ba786f81ea0c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab74765fa30b653963205e90d6bcdd3a = $(`<div id="html_ab74765fa30b653963205e90d6bcdd3a" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_00e44336aad1d426e02ba786f81ea0c5.setContent(html_ab74765fa30b653963205e90d6bcdd3a);
+            
+        
+
+        marker_b25f005f2f0ea3d5eae4b5af58b39811.bindPopup(popup_00e44336aad1d426e02ba786f81ea0c5)
+        ;
+
+        
+    
+    
+            marker_b25f005f2f0ea3d5eae4b5af58b39811.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9e4abe466801a04fccf3247530832feb = L.marker(
+                [40.710785, -73.95995],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_c41e06a92f35617e43dc77239ced307b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_9e4abe466801a04fccf3247530832feb.setIcon(icon_c41e06a92f35617e43dc77239ced307b);
+        
+    
+        var popup_f1d659b309207067884149a73355267b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c482abd09b9fcfe71de10283c24133a = $(`<div id="html_1c482abd09b9fcfe71de10283c24133a" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 23 CYCLIST KILLED: 0</div>`)[0];
+                popup_f1d659b309207067884149a73355267b.setContent(html_1c482abd09b9fcfe71de10283c24133a);
+            
+        
+
+        marker_9e4abe466801a04fccf3247530832feb.bindPopup(popup_f1d659b309207067884149a73355267b)
+        ;
+
+        
+    
+    
+            marker_9e4abe466801a04fccf3247530832feb.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 23
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_754be267ad4b9f45e7d84ff6ca46c320 = L.marker(
+                [40.60739, -73.943214],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_e360d03dfa074bc2127b875e4641750b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_754be267ad4b9f45e7d84ff6ca46c320.setIcon(icon_e360d03dfa074bc2127b875e4641750b);
+        
+    
+        var popup_874b91a7570a2aa8299a2ef61504001e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b55e061718a59366746525c3038d8457 = $(`<div id="html_b55e061718a59366746525c3038d8457" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_874b91a7570a2aa8299a2ef61504001e.setContent(html_b55e061718a59366746525c3038d8457);
+            
+        
+
+        marker_754be267ad4b9f45e7d84ff6ca46c320.bindPopup(popup_874b91a7570a2aa8299a2ef61504001e)
+        ;
+
+        
+    
+    
+            marker_754be267ad4b9f45e7d84ff6ca46c320.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ff8dcccd0f402e31960ac11924ffeecc = L.marker(
+                [40.686996, -73.95685],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_95c30342a738b0ee741d36b0528fd946 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ff8dcccd0f402e31960ac11924ffeecc.setIcon(icon_95c30342a738b0ee741d36b0528fd946);
+        
+    
+        var popup_4b729d4281e8fb43c11c2c3ae304c4a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f265f865ec32bc82a3a50c7ca59b58b = $(`<div id="html_1f265f865ec32bc82a3a50c7ca59b58b" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_4b729d4281e8fb43c11c2c3ae304c4a4.setContent(html_1f265f865ec32bc82a3a50c7ca59b58b);
+            
+        
+
+        marker_ff8dcccd0f402e31960ac11924ffeecc.bindPopup(popup_4b729d4281e8fb43c11c2c3ae304c4a4)
+        ;
+
+        
+    
+    
+            marker_ff8dcccd0f402e31960ac11924ffeecc.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_556f2b673d8cc517549dee34e186f260 = L.marker(
+                [40.633858, -74.12596],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_584e8bcf930137defa5655d7a6a1f256 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_556f2b673d8cc517549dee34e186f260.setIcon(icon_584e8bcf930137defa5655d7a6a1f256);
+        
+    
+        var popup_7c92f9c8fad703a558d9d7583303ceff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f305a980c7533bef038be90665f5b70d = $(`<div id="html_f305a980c7533bef038be90665f5b70d" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_7c92f9c8fad703a558d9d7583303ceff.setContent(html_f305a980c7533bef038be90665f5b70d);
+            
+        
+
+        marker_556f2b673d8cc517549dee34e186f260.bindPopup(popup_7c92f9c8fad703a558d9d7583303ceff)
+        ;
+
+        
+    
+    
+            marker_556f2b673d8cc517549dee34e186f260.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_207ee0dda34d808c27ec6e8bf923a0fd = L.marker(
+                [40.668667, -73.868324],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_81f53971171aebabb822d35ae9a99fcc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_207ee0dda34d808c27ec6e8bf923a0fd.setIcon(icon_81f53971171aebabb822d35ae9a99fcc);
+        
+    
+        var popup_a3e57cb7f3b4af99587406ead3fd8821 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13b94b3e6b3325f86279ce43c165353d = $(`<div id="html_13b94b3e6b3325f86279ce43c165353d" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 3 CYCLIST KILLED: 1</div>`)[0];
+                popup_a3e57cb7f3b4af99587406ead3fd8821.setContent(html_13b94b3e6b3325f86279ce43c165353d);
+            
+        
+
+        marker_207ee0dda34d808c27ec6e8bf923a0fd.bindPopup(popup_a3e57cb7f3b4af99587406ead3fd8821)
+        ;
+
+        
+    
+    
+            marker_207ee0dda34d808c27ec6e8bf923a0fd.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 3
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45c25883323ce5de8ad92dbdc7e64d11 = L.marker(
+                [40.73321, -73.981064],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_f6b8c9a06f7ed0bc263b3da1d119535c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_45c25883323ce5de8ad92dbdc7e64d11.setIcon(icon_f6b8c9a06f7ed0bc263b3da1d119535c);
+        
+    
+        var popup_17ad08edc4058195a55091d022277ad5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_75a96b59bb7a58edbc470db4073f024c = $(`<div id="html_75a96b59bb7a58edbc470db4073f024c" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_17ad08edc4058195a55091d022277ad5.setContent(html_75a96b59bb7a58edbc470db4073f024c);
+            
+        
+
+        marker_45c25883323ce5de8ad92dbdc7e64d11.bindPopup(popup_17ad08edc4058195a55091d022277ad5)
+        ;
+
+        
+    
+    
+            marker_45c25883323ce5de8ad92dbdc7e64d11.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab3260a57eedcc9eb7dbde7add959050 = L.marker(
+                [40.741047, -73.91818],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_dbc184f2dcb5c9157a6feb6c9b7332f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ab3260a57eedcc9eb7dbde7add959050.setIcon(icon_dbc184f2dcb5c9157a6feb6c9b7332f1);
+        
+    
+        var popup_633cb18f486e6ae5f4b9f9afdabe2662 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a61edb9d5c2b12e71a1378545fbaf782 = $(`<div id="html_a61edb9d5c2b12e71a1378545fbaf782" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_633cb18f486e6ae5f4b9f9afdabe2662.setContent(html_a61edb9d5c2b12e71a1378545fbaf782);
+            
+        
+
+        marker_ab3260a57eedcc9eb7dbde7add959050.bindPopup(popup_633cb18f486e6ae5f4b9f9afdabe2662)
+        ;
+
+        
+    
+    
+            marker_ab3260a57eedcc9eb7dbde7add959050.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8fce3d559b467f4530469547884a14ba = L.marker(
+                [40.78228, -73.914604],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_ccea83f5d6af510923f35d43fe52234f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8fce3d559b467f4530469547884a14ba.setIcon(icon_ccea83f5d6af510923f35d43fe52234f);
+        
+    
+        var popup_8c2c629f5bb8d23aefb7de7b96dea5c1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08440c9c28f873957ca243e6ed52787d = $(`<div id="html_08440c9c28f873957ca243e6ed52787d" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_8c2c629f5bb8d23aefb7de7b96dea5c1.setContent(html_08440c9c28f873957ca243e6ed52787d);
+            
+        
+
+        marker_8fce3d559b467f4530469547884a14ba.bindPopup(popup_8c2c629f5bb8d23aefb7de7b96dea5c1)
+        ;
+
+        
+    
+    
+            marker_8fce3d559b467f4530469547884a14ba.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45ec9522d1b917c589241f6ff2aa219b = L.marker(
+                [40.821636, -73.93909],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_ab8792bfc2711adaa23f3e4022c35a26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_45ec9522d1b917c589241f6ff2aa219b.setIcon(icon_ab8792bfc2711adaa23f3e4022c35a26);
+        
+    
+        var popup_2af1da59b5e3ea1385f789886134fc16 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50b6a90810924212e9e37a71be5d5887 = $(`<div id="html_50b6a90810924212e9e37a71be5d5887" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 22 CYCLIST KILLED: 0</div>`)[0];
+                popup_2af1da59b5e3ea1385f789886134fc16.setContent(html_50b6a90810924212e9e37a71be5d5887);
+            
+        
+
+        marker_45ec9522d1b917c589241f6ff2aa219b.bindPopup(popup_2af1da59b5e3ea1385f789886134fc16)
+        ;
+
+        
+    
+    
+            marker_45ec9522d1b917c589241f6ff2aa219b.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 22
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4336301a196f43973de37216d31fb7ac = L.marker(
+                [40.630672, -73.981895],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_5d7cd0699c194d02bf44686af64c07a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_4336301a196f43973de37216d31fb7ac.setIcon(icon_5d7cd0699c194d02bf44686af64c07a3);
+        
+    
+        var popup_dfdb21da66c763cbe165380a83d5259d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb92709fc2414e5562fba2840ecda3a5 = $(`<div id="html_fb92709fc2414e5562fba2840ecda3a5" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_dfdb21da66c763cbe165380a83d5259d.setContent(html_fb92709fc2414e5562fba2840ecda3a5);
+            
+        
+
+        marker_4336301a196f43973de37216d31fb7ac.bindPopup(popup_dfdb21da66c763cbe165380a83d5259d)
+        ;
+
+        
+    
+    
+            marker_4336301a196f43973de37216d31fb7ac.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6d439c6b6597e05498e25f8b0549344d = L.marker(
+                [40.67922, -73.90405],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_77cd42813bf04cd4e6d17068b4874007 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6d439c6b6597e05498e25f8b0549344d.setIcon(icon_77cd42813bf04cd4e6d17068b4874007);
+        
+    
+        var popup_aad9eaf438b5c7ce058d7ec9d3636193 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d96950057b1ef34e673c03cc10fb625 = $(`<div id="html_8d96950057b1ef34e673c03cc10fb625" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_aad9eaf438b5c7ce058d7ec9d3636193.setContent(html_8d96950057b1ef34e673c03cc10fb625);
+            
+        
+
+        marker_6d439c6b6597e05498e25f8b0549344d.bindPopup(popup_aad9eaf438b5c7ce058d7ec9d3636193)
+        ;
+
+        
+    
+    
+            marker_6d439c6b6597e05498e25f8b0549344d.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_234df62d2b6718d45321bafbb657988d = L.marker(
+                [40.762802, -73.965675],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_2f0e3a3055ce88df249be6e288f31a1d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_234df62d2b6718d45321bafbb657988d.setIcon(icon_2f0e3a3055ce88df249be6e288f31a1d);
+        
+    
+        var popup_b3c46a6e1872ae99f2a88d5f7a7407cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9e4d13f29aa40396a50fa16e1eb5d23 = $(`<div id="html_b9e4d13f29aa40396a50fa16e1eb5d23" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_b3c46a6e1872ae99f2a88d5f7a7407cd.setContent(html_b9e4d13f29aa40396a50fa16e1eb5d23);
+            
+        
+
+        marker_234df62d2b6718d45321bafbb657988d.bindPopup(popup_b3c46a6e1872ae99f2a88d5f7a7407cd)
+        ;
+
+        
+    
+    
+            marker_234df62d2b6718d45321bafbb657988d.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_97d72141cecd5d069a8f48887e1d0796 = L.marker(
+                [40.678722, -73.952995],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_d417d0a467689fb3dc632b4dedfec9f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_97d72141cecd5d069a8f48887e1d0796.setIcon(icon_d417d0a467689fb3dc632b4dedfec9f4);
+        
+    
+        var popup_599a1ddd14e95c89f2dddc952f023be5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d3d24a1fa49de244f1fb78514ef5378 = $(`<div id="html_4d3d24a1fa49de244f1fb78514ef5378" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 22 CYCLIST KILLED: 0</div>`)[0];
+                popup_599a1ddd14e95c89f2dddc952f023be5.setContent(html_4d3d24a1fa49de244f1fb78514ef5378);
+            
+        
+
+        marker_97d72141cecd5d069a8f48887e1d0796.bindPopup(popup_599a1ddd14e95c89f2dddc952f023be5)
+        ;
+
+        
+    
+    
+            marker_97d72141cecd5d069a8f48887e1d0796.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 22
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_457efefc6a4e3166815fbaa9daf22203 = L.marker(
+                [40.846825, -73.89705],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_f54dcd8e38cf42aa760d3076c6af9808 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_457efefc6a4e3166815fbaa9daf22203.setIcon(icon_f54dcd8e38cf42aa760d3076c6af9808);
+        
+    
+        var popup_0fcb70a5242654a81442147d883427e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_714ff770c5f6a48b2254b1006b0fdcf5 = $(`<div id="html_714ff770c5f6a48b2254b1006b0fdcf5" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_0fcb70a5242654a81442147d883427e1.setContent(html_714ff770c5f6a48b2254b1006b0fdcf5);
+            
+        
+
+        marker_457efefc6a4e3166815fbaa9daf22203.bindPopup(popup_0fcb70a5242654a81442147d883427e1)
+        ;
+
+        
+    
+    
+            marker_457efefc6a4e3166815fbaa9daf22203.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2142ef023291343d517cdab8e8d925c5 = L.marker(
+                [40.72616, -73.90012],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_74b669769b00c70eea8b7c0971355a81 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2142ef023291343d517cdab8e8d925c5.setIcon(icon_74b669769b00c70eea8b7c0971355a81);
+        
+    
+        var popup_23f14bf3eb15e22fc61446dd8f24c81b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db0cae67bb38eff0f3cd132d3aa51b8b = $(`<div id="html_db0cae67bb38eff0f3cd132d3aa51b8b" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_23f14bf3eb15e22fc61446dd8f24c81b.setContent(html_db0cae67bb38eff0f3cd132d3aa51b8b);
+            
+        
+
+        marker_2142ef023291343d517cdab8e8d925c5.bindPopup(popup_23f14bf3eb15e22fc61446dd8f24c81b)
+        ;
+
+        
+    
+    
+            marker_2142ef023291343d517cdab8e8d925c5.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_77a8649501f6fb7b5278e7002ff4d964 = L.marker(
+                [40.810352, -73.91761],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_32695c548bed9b7639fa6e175bbb784c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_77a8649501f6fb7b5278e7002ff4d964.setIcon(icon_32695c548bed9b7639fa6e175bbb784c);
+        
+    
+        var popup_e97453b884ed3c6d12f726ef00bac955 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e7f150fab30bf57203d057d40608dd2 = $(`<div id="html_3e7f150fab30bf57203d057d40608dd2" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_e97453b884ed3c6d12f726ef00bac955.setContent(html_3e7f150fab30bf57203d057d40608dd2);
+            
+        
+
+        marker_77a8649501f6fb7b5278e7002ff4d964.bindPopup(popup_e97453b884ed3c6d12f726ef00bac955)
+        ;
+
+        
+    
+    
+            marker_77a8649501f6fb7b5278e7002ff4d964.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_733792311e01bb402356fe3033e6d023 = L.marker(
+                [40.5916, -73.960686],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_bde216e7f90fad986f65144ef6b7389c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_733792311e01bb402356fe3033e6d023.setIcon(icon_bde216e7f90fad986f65144ef6b7389c);
+        
+    
+        var popup_c60c7138916a1dd75300409d29ad3ba8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f86f5fe65fe72015f063c08436b2189 = $(`<div id="html_8f86f5fe65fe72015f063c08436b2189" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_c60c7138916a1dd75300409d29ad3ba8.setContent(html_8f86f5fe65fe72015f063c08436b2189);
+            
+        
+
+        marker_733792311e01bb402356fe3033e6d023.bindPopup(popup_c60c7138916a1dd75300409d29ad3ba8)
+        ;
+
+        
+    
+    
+            marker_733792311e01bb402356fe3033e6d023.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1e66611bb4f01352a90be62ab7e35a9 = L.marker(
+                [40.642097, -74.00987],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_05c130965921d051cd802126c38acdf3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_b1e66611bb4f01352a90be62ab7e35a9.setIcon(icon_05c130965921d051cd802126c38acdf3);
+        
+    
+        var popup_6121fb9a995c6b30afa6fc7f2ea8ef9c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4dbc800bf059f06f3fe4d991996a6530 = $(`<div id="html_4dbc800bf059f06f3fe4d991996a6530" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_6121fb9a995c6b30afa6fc7f2ea8ef9c.setContent(html_4dbc800bf059f06f3fe4d991996a6530);
+            
+        
+
+        marker_b1e66611bb4f01352a90be62ab7e35a9.bindPopup(popup_6121fb9a995c6b30afa6fc7f2ea8ef9c)
+        ;
+
+        
+    
+    
+            marker_b1e66611bb4f01352a90be62ab7e35a9.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45a287ed3f84f841929d372d4b4dd2c0 = L.marker(
+                [40.783245, -73.94473],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_677ba1cf61afadcab15f1205024492a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_45a287ed3f84f841929d372d4b4dd2c0.setIcon(icon_677ba1cf61afadcab15f1205024492a2);
+        
+    
+        var popup_91f4e7a6f5c23118b8fae2550c31b082 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d677b6b3ab22501ac1f3bedcfd468a9 = $(`<div id="html_4d677b6b3ab22501ac1f3bedcfd468a9" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 22 CYCLIST KILLED: 0</div>`)[0];
+                popup_91f4e7a6f5c23118b8fae2550c31b082.setContent(html_4d677b6b3ab22501ac1f3bedcfd468a9);
+            
+        
+
+        marker_45a287ed3f84f841929d372d4b4dd2c0.bindPopup(popup_91f4e7a6f5c23118b8fae2550c31b082)
+        ;
+
+        
+    
+    
+            marker_45a287ed3f84f841929d372d4b4dd2c0.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 22
+CYCLIST KILLED: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f6bb22bd9768867f5cad84b9fcad09ba = L.marker(
+                [40.77309, -73.91108],
+                {"fill": "red"}
+            ).addTo(map_9884723db96c2f1b024cb0bc56f8851b);
+        
+    
+            var icon_2fddb757ac10d1b2cf6bc6ff262fe07a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-exclamation", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f6bb22bd9768867f5cad84b9fcad09ba.setIcon(icon_2fddb757ac10d1b2cf6bc6ff262fe07a);
+        
+    
+        var popup_f448476746175835fee3ddb6ad476557 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_12467ba4f6b7b7cdddffc4f0866cf3bd = $(`<div id="html_12467ba4f6b7b7cdddffc4f0866cf3bd" style="width: 100.0%; height: 100.0%;">CYCLIST INJURED: 2 CYCLIST KILLED: 1</div>`)[0];
+                popup_f448476746175835fee3ddb6ad476557.setContent(html_12467ba4f6b7b7cdddffc4f0866cf3bd);
+            
+        
+
+        marker_f6bb22bd9768867f5cad84b9fcad09ba.bindPopup(popup_f448476746175835fee3ddb6ad476557)
+        ;
+
+        
+    
+    
+            marker_f6bb22bd9768867f5cad84b9fcad09ba.bindTooltip(
+                `<div>
+                     CYCLIST INJURED: 2
+CYCLIST KILLED: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

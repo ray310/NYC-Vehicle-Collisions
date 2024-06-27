@@ -5,12 +5,12 @@ description: Interactive map of clusters of injuries and deaths from vehicle col
 hide_hero: true
 ---
 # Dangerous Areas
-Dangerous areas are clusters of collisions with a high number of injuries and deaths from vehicle collisions. Clusters were identified by tuning a density-based clustering algorithm.
+{% include dangerous_area.html %}
 
 {% include visit_github.html %}
 
 {% include slow_load.html %}
 
-{% include click.html %}
+{% include click_cluster.html %}
 <iframe src="clusters_serious_map.html" title="Marker cluster map identifying areas with a high density of serious collisions in New York City"></iframe>
 {% include map_data_range_full.html %}
