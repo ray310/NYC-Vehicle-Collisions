@@ -5,7 +5,9 @@ description: Interactive map of clusters of injuries and deaths from vehicle col
 hide_hero: true
 ---
 # Dangerous Areas
-{% include dangerous_area.html %}
+{% include dangerous_area.html %} 
+
+__The below map contains 50 of the most dangerous areas in New York City.__
 
 {% include visit_github.html %}
 

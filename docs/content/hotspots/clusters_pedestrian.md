@@ -5,7 +5,9 @@ description: Interactive map of clusters of pedestrians injuries and deaths from
 hide_hero: true
 ---
 # Dangerous Areas for Pedestrians
-{% include dangerous_area.html %}
+{% include dangerous_area.html %} 
+
+__The below map contains 50 of the most dangerous areas for pedestrians in New York City.__
 
 {% include visit_github.html %}
 

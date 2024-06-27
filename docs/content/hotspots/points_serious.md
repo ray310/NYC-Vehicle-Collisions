@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Dangerous Locations in New York City
-description: Interactive map of locations with a high number of injuries and deaths from vehicle collisions in New York City (NYC)
+description: Interactive map of points with a high number of injuries and deaths from vehicle collisions in New York City (NYC)
 hide_hero: true
 ---
-# Dangerous Locations
-Single points with a high number of injuries and deaths from vehicle collisions.
+# Dangerous Points
+{% include dangerous_points.html %} The below map contains 100 of the most dangerous points in New York City.
 
 {% include visit_github.html %}
 
