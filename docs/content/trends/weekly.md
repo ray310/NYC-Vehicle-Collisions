@@ -27,4 +27,4 @@ ___100+ people are injured on most days___
 #### Collisions with pedestrians and cyclists have a similar pattern to serious collisions
 <img src="images/non_motor_heat.png">
 
-{% include analysis_data_range.html %}
+{% include analysis_data_range_no_lat_long.html %}
