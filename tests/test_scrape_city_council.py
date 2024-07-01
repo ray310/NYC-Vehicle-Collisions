@@ -80,13 +80,28 @@ def test_parse_cc_email():
     """Correct email address should come after mailto:."""
     district_num = 1
     test_cases = [
-        ({"href": f"mailto:District{district_num}@council.nyc.gov"}, f"District{district_num}@council.nyc.gov"),
-        ({"href": f"mailto:district{district_num}@council.nyc.gov"}, f"district{district_num}@council.nyc.gov"),
+        (
+            {"href": f"mailto:District{district_num}@council.nyc.gov"},
+            f"District{district_num}@council.nyc.gov",
+        ),
+        (
+            {"href": f"mailto:district{district_num}@council.nyc.gov"},
+            f"district{district_num}@council.nyc.gov",
+        ),
         ({"href": "mailto:gquagmire@council.nyc.gov"}, "gquagmire@council.nyc.gov"),
-        ({"href": "mailtogquagmire@council.nyc.gov"}, f"district{district_num}@council.nyc.gov"),
-        ({"href": "adamwest@council.nyc.gov"}, f"district{district_num}@council.nyc.gov"),  # no mailto
-        ({"href": "mailto:adamwest@council.nyc.com"}, f"district{district_num}@council.nyc.gov"),  # .com
-        (None, f"district{district_num}@council.nyc.gov")
+        (
+            {"href": "mailtogquagmire@council.nyc.gov"},
+            f"district{district_num}@council.nyc.gov",
+        ),
+        (
+            {"href": "adamwest@council.nyc.gov"},
+            f"district{district_num}@council.nyc.gov",
+        ),  # no mailto
+        (
+            {"href": "mailto:adamwest@council.nyc.com"},
+            f"district{district_num}@council.nyc.gov",
+        ),  # .com
+        (None, f"district{district_num}@council.nyc.gov"),
     ]
     for case in test_cases:
         assert scc.parse_cc_email(case[0], district_num) == case[1]
