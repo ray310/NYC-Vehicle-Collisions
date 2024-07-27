@@ -1,7 +1,5 @@
 """Module to process raw collision data into analysis-ready dataset."""
 
-from datetime import datetime
-
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
@@ -18,15 +16,15 @@ PROCESSED_DATA_LOC = "data/processed/crashes.pkl"
 
 # downloaded June 2024
 # https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
-COLLISION_DATA_LOC = "data/raw/Collisions.csv"
+COLLISION_DATA_LOC = "data/raw/collisions/Collisions.csv"
 
 # downloaded June 2024
 # https://data.cityofnewyork.us/Public-Safety/Police-Precincts/78dh-3ptz
-POLICE_PRECINCT_GEOMS_LOC = "data/raw/nyc_police_precincts_geoms.geojson"
+POLICE_PRECINCT_GEOMS_LOC = "data/raw/police/nyc_police_precincts_geoms.geojson"
 
 # downloaded June 2024
 # https://data.cityofnewyork.us/City-Government/City-Council-Districts/yusd-j4xi
-DISTRICT_GEO_LOC = "data/raw/City Council Districts.geojson"
+DISTRICT_GEO_LOC = "data/raw/citycouncil/City Council Districts.geojson"
 
 
 def process_data():
@@ -79,15 +77,13 @@ def process_data():
     ]
     crashes = crashes[fields_to_keep]
 
-    # creating datetime field
-    dt_fmt = "%m/%d/%Y %H:%M"
-    crashes["datetime"] = crashes["DATE"] + " " + crashes["TIME"]
-    crashes["datetime"] = crashes["datetime"].apply(
-        lambda x: datetime.strptime(x, dt_fmt)
-    )
+    # creating datetime index
+    dt_str = crashes["DATE"] + " " + crashes["TIME"]
+    crashes["datetime"] = pd.to_datetime(dt_str, format="%m/%d/%Y %H:%M")
+    crashes = crashes.set_index("datetime")
 
     # creating season field
-    crashes["season"] = crashes["datetime"].apply(src.utils.date_to_season)
+    crashes["season"] = pd.Categorical(crashes.index.map(src.utils.date_to_season))
 
     # creating  valid location coordinate flags
     crashes["valid_lat_long"] = (
@@ -116,9 +112,11 @@ def process_data():
     crashes = src.utils.add_location_feature(
         crashes, POLICE_PRECINCT_GEOMS_LOC, "precinct"
     )
+    crashes["precinct"] = pd.Categorical(crashes["precinct"])
     crashes = src.utils.add_location_feature(
         crashes, DISTRICT_GEO_LOC, "coun_dist", feature_name="district"
     )
+    crashes["district"] = pd.Categorical(crashes["district"])
 
     # save processed data
     crashes.to_pickle(PROCESSED_DATA_LOC)
