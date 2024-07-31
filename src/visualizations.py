@@ -1,4 +1,4 @@
-"""Helper functions for project visualizations"""
+"""Helper functions for project visualizations."""
 
 import folium
 import folium.plugins
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from src.constants import NYC_MAP_CENTER
 
 
-HEATMAP_COLORS = [
+HEATMAP_COLORS = (
     "#e1e1e1",  # gray-white
     "#cbcacc",
     "#bcbabe",
@@ -19,52 +19,165 @@ HEATMAP_COLORS = [
     "#a88284",
     "#b0403c",
     "#b31f17",  # red
-]
+)
 
-CYCLE_COLORS = [
+CYCLE_COLORS = (
     "#4C72B0",  # blue
     "#C44E52",  # red
     "#8172B2",  # purple
     "#55A868",  # green
     "#CF6D17",  # orange
     "#7F7F7F",  # gray
-]
+)
 
 
-def make_grouped_bar_chart(
-    df,
+def setup_chart(
+    figsize=(18, 10),
     title="",
-    x_label="",
-    y_label="",
+    titlesize=28,
+    titlepad=25,
+    ylabel="",
+    ylabel_size=22,
+    ylabel_rotation="horizontal",
+    ylabel_pad=30,
+    ylogscale=False,
+    ylim=None,
+    yaxis_format=None,
+    yticksize_major=20,
+    xlabel="",
+    xlabel_size=22,
+    xlabel_rotation="horizontal",
+    xlabel_pad=10,
+    xlim=None,
+    xticksize_major=20,
+    xaxis_format=None,
+    majortick_locator_x=None,
+    xticks=None,
+    minor_ticks=False,
+    colors=CYCLE_COLORS,
+    text=None,
+    textfontsize=16,
+    textfontstyle="normal",  # italic, bold
+):
+    """Setup common parameters for Matplotlib charts."""
+    fig, ax = plt.subplots()
+    fig.set_size_inches(figsize)  # width, height
+    ax.set_title(title, fontsize=titlesize, pad=titlepad)
+    # y axis
+    ax.set_ylabel(
+        ylabel,
+        fontsize=ylabel_size,
+        rotation=ylabel_rotation,
+        labelpad=ylabel_pad,
+    )
+    if ylogscale:
+        ax.set_yscale("log")
+    if ylim:
+        ax.set_ylim(ymin=ylim[0], ymax=ylim[1])
+    if yaxis_format:
+        ax.yaxis.set_major_formatter(yaxis_format)
+    ax.tick_params(axis="y", which="major", labelsize=yticksize_major)
+    # x axis
+    ax.set_xlabel(
+        xlabel,
+        fontsize=xlabel_size,
+        rotation=xlabel_rotation,
+        labelpad=xlabel_pad,
+    )
+    if xlim:
+        ax.set_xlim(xmin=xlim[0], xmax=xlim[1])
+    ax.tick_params(axis="x", which="major", labelsize=xticksize_major)
+    if xaxis_format:
+        ax.xaxis.set_major_formatter(xaxis_format)
+    if majortick_locator_x:
+        ax.xaxis.set_major_locator(majortick_locator_x)
+    if xticks is not None:
+        ax.set_xticks(**xticks)
+
+    if minor_ticks:
+        ax.minorticks_on()
+    else:
+        ax.minorticks_off()
+    if colors:
+        ax.set_prop_cycle("color", colors)  # color_cycle
+    if text:
+        ax.text(
+            text[0],
+            text[1],
+            text[2],
+            transform=ax.transAxes,
+            fontsize=textfontsize,
+            fontstyle=textfontstyle,
+        )
+    return fig, ax
+
+
+def annotate_axis(
+    ax,
+    x_arr,
+    y_arr,
+    annotate_digits=1,
+    vert_offset=15,
+    textcoords="offset pixels",
+    annotate_fontsize=14,
+    ha="center",
+    annotate_bbox=None,
+):
+    """Annotate axes with y value."""
+    for x, y in zip(x_arr, y_arr):
+        ax.annotate(
+            f"{y:,.{annotate_digits}f}",
+            xy=(x, y),
+            xytext=(0, vert_offset),
+            textcoords=textcoords,
+            fontsize=annotate_fontsize,
+            ha=ha,
+            bbox=annotate_bbox,
+        )  # xytext represents offset
+
+
+def fig_legend(
+    fig,
+    legend_labels,
+    legend_fontsize=16,
+    legend_framealpha=0.0,
+    legend_bbox=(1.0, 0.9),
+    legend_labelspacing=0.7,
+    legend_handleheight=1.5,
+    **kwargs,
+):
+    """Setup common parameters for legend attached to figure."""
+    legend_args = {
+        "fontsize": legend_fontsize,
+        "framealpha": legend_framealpha,
+        "bbox_to_anchor": legend_bbox,
+        "labelspacing": legend_labelspacing,
+        "handleheight": legend_handleheight,
+    }
+    fig.legend(labels=legend_labels, **legend_args, **kwargs)
+
+
+def grouped_bar_chart(
+    df,
     legend_labels="",
     style="default",
     save="",
-    fig_size=(18, 10),
     relative_gap=0.1,
-    title_fontsize=32,
-    label_fontsize=22,
-    ylabel_rotation="horizontal",
-    ylabel_pad=30,
-    logscale=False,
-    major_tick_fontsize=20,
-    minor_tick_fontsize=14,
-    minor_ticks_off=False,
-    colors=None,
     bar_fontsize=16,
     bar_padding=3,
-    legend=True,
-    legend_fontsize=16,
-    legend_bbox=(1.1, 0.9),
-    legend_labelspacing=0.7,
-    legend_handleheight=1.5,
     bar_label_bbox=None,
     bar_digits=0,
+    legend_args=None,
+    **setup_args,
 ):
-    """Makes a grouped vertical bar chart from a pd.DataFrame where the DataFrame index
-    represents the groupings and columns represent the individual bar heights"""
+    """Make a grouped vertical bar chart from a pd.DataFrame where the DataFrame index
+    represents the groupings and columns represent the individual bar heights.
+    """
     with plt.style.context(style):
+        fig, ax = setup_chart(**setup_args)
+
         # bar and bar group sizes
-        bar_group_width = fig_size[0] / len(df.index)
+        bar_group_width = fig.get_size_inches()[0] / len(df.index)
         bars_no_space_width = bar_group_width * (1 - relative_gap)
         bar_width = (bar_group_width / len(df.columns)) * (1 - relative_gap)
 
@@ -74,36 +187,11 @@ def make_grouped_bar_chart(
         for x in range(len(x_labels)):
             x_loc = -bar_width + (bars_no_space_width / 2) + (bar_group_width * x)
             x_label_locs.append(x_loc)
-
-        # figure, title, and axis labels
-        fig, ax = plt.subplots()
-        fig.set_size_inches(fig_size)  # width, height
-        ax.set_title(title, fontsize=title_fontsize, pad=30)
-        ax.set_ylabel(
-            y_label,
-            fontsize=label_fontsize,
-            rotation=ylabel_rotation,
-            labelpad=ylabel_pad,
-        )
-        ax.set_xlabel(x_label, fontsize=label_fontsize, labelpad=10)
-
-        # tick labels, size, and gridlines
-        if logscale:
-            ax.set_yscale("log")
-        ax.yaxis.set_major_formatter("{x:,.0f}")
-        ax.yaxis.set_minor_formatter("{x:,.0f}")
-        ax.tick_params(which="major", labelsize=major_tick_fontsize)
-        ax.tick_params(which="minor", labelsize=minor_tick_fontsize)
         ax.set_xticks(x_label_locs, x_labels)
         ax.set_axisbelow(True)
         ax.grid(which="major", axis="y", linewidth=0.9)
 
-        if minor_ticks_off:
-            ax.minorticks_off()
-
         # bars and bar labels
-        if colors:
-            ax.set_prop_cycle("color", colors)  # color_cycle
         bars = []
         for i in range(len(df.columns)):
             col_name = df.columns[i]
@@ -111,7 +199,6 @@ def make_grouped_bar_chart(
             x = [offset + (bar_group_width * j) for j in range(len(df.index))]
             y = df[col_name].values
             bars.append(ax.bar(x, height=y, width=bar_width, label=col_name))
-
         for bar in bars:
             if bar_label_bbox is None:
                 bar_label_bbox = {"facecolor": "none", "edgecolor": "none"}
@@ -122,123 +209,59 @@ def make_grouped_bar_chart(
                 padding=bar_padding,
                 bbox=bar_label_bbox,
             )
-
         # legend
-        if legend:
-            legend_args = {
-                "fontsize": legend_fontsize,
-                "framealpha": 0.0,
-                "bbox_to_anchor": legend_bbox,
-                "labelspacing": legend_labelspacing,
-                "handleheight": legend_handleheight,
-            }
-            if legend_labels:  # manually labeling legend is sensitive to order
-                fig.legend(labels=legend_labels, **legend_args)
-            else:
-                fig.legend(**legend_args)
+        if legend_labels:
+            legend_kwargs = {}
+            if legend_args is not None:
+                legend_kwargs = legend_args
+            fig_legend(
+                fig, legend_labels, **legend_kwargs
+            )  # legend labels are sensitive to order
     if save:
         plt.savefig(save, bbox_inches="tight")
     plt.show()
 
 
-def make_horizontal_bar_chart(
+def horizontal_bar_chart(
     bar_labels,
     bar_values,
-    title="",
-    x_label="",
+    bar_fontsize=20,
     style="default",
     save="",
-    fig_size=(18, 10),
-    title_fontsize=32,
-    label_fontsize=22,
-    major_tick_fontsize=20,
     reverse=False,
+    **setup_args,
 ):
-    """Makes a horizontal bar chart from input bar labels and respective values"""
+    """Make a horizontal bar chart from input bar labels and respective values."""
     with plt.style.context(style):
-        # figure, title, and axis labels
-        fig, ax = plt.subplots()
-        fig.set_size_inches(fig_size)  # width, height
-        ax.set_title(title, fontsize=title_fontsize, pad=30)
-        ax.set_xlabel(x_label, fontsize=label_fontsize, labelpad=10)
-
+        fig, ax = setup_chart(**setup_args)
         # horizontal bars
         y = list(range(len(bar_values)))
         if reverse:
             y.reverse()
         bars = ax.barh(y, bar_values)
         ax.set_yticks(y, bar_labels, va="center")
-
-        # tick labels and size
-        ax.bar_label(bars, padding=5, fontsize=20)
-        ax.tick_params(which="major", labelsize=major_tick_fontsize)
-
+        ax.bar_label(bars, padding=5, fontsize=bar_fontsize)
     if save:
         plt.savefig(save, bbox_inches="tight")
     plt.show()
 
 
-def make_line_chart(
+def line_chart(
     list_x_y_tuples,
     style="default",
-    fig_size=(18, 10),
-    title="",
-    title_fontsize=32,
-    y_label="",
-    label_fontsize=22,
-    ylabel_rotation="horizontal",
-    ylabel_pad=60,
-    x_label="",
-    logscale=False,
-    y_lim=None,
-    yaxis_digits=0,
-    set_major_tick_x=None,
-    tick_fontsize=20,
-    colors=None,
     markerstyle="o",
     markersize=10,
     linewidth=5,
     annotate=False,
-    annotate_digits=1,
-    vert_offset=15,
-    annotate_fontsize=14,
-    annotate_bbox=None,
+    annotate_args=None,
     legend_labels=None,
-    legend_fontsize=16,
-    legend_bbox=(1.1, 0.9),
-    legend_labelspacing=0.7,
-    legend_handleheight=1.5,
-    text=None,
-    text_fontsize=16,
-    text_fontstyle="normal",
+    legend_args=None,
     save="",
+    **setup_args,
 ):
-    """Makes a line chart"""
+    """Make a line chart."""
     with plt.style.context(style):
-        # figure, title, and axis labels
-        fig, ax = plt.subplots()
-        fig.set_size_inches(fig_size)  # width, height
-        ax.set_title(title, fontsize=title_fontsize, pad=30)
-        ax.set_ylabel(
-            y_label,
-            fontsize=label_fontsize,
-            rotation=ylabel_rotation,
-            labelpad=ylabel_pad,
-        )
-        ax.set_xlabel(x_label, fontsize=label_fontsize, labelpad=10)
-
-        # axes parameters and colors
-        ax.tick_params(which="both", labelsize=tick_fontsize)
-        if logscale:
-            ax.set_yscale("log")
-        if y_lim:
-            ax.set_ylim(ymin=y_lim[0], ymax=y_lim[1])
-        ax.yaxis.set_major_formatter(f"{{x:,.{yaxis_digits}f}}")
-        if set_major_tick_x:
-            ax.xaxis.set_major_locator(set_major_tick_x)
-        if colors:
-            ax.set_prop_cycle("color", colors)  # color_cycle
-
+        fig, ax = setup_chart(**setup_args)
         # plot lines
         for tup in list_x_y_tuples:
             x_arr, y_arr = tup
@@ -250,69 +273,45 @@ def make_line_chart(
                 linewidth=linewidth,
             )
             if annotate:
-                for x, y in zip(x_arr, y_arr):
-                    ax.annotate(
-                        f"{y:,.{annotate_digits}f}",
-                        xy=(x, y),
-                        xytext=(0, vert_offset),
-                        textcoords="offset pixels",
-                        fontsize=annotate_fontsize,
-                        ha="center",
-                        bbox=annotate_bbox,
-                    )  # xytext represents offset
+                annotate_axis(ax, x_arr, y_arr, **annotate_args)
 
         # legend
         if legend_labels:
-            legend_args = {
-                "fontsize": legend_fontsize,
-                "framealpha": 0.0,
-                "bbox_to_anchor": legend_bbox,
-                "labelspacing": legend_labelspacing,
-                "handleheight": legend_handleheight,
-            }
-            fig.legend(
-                labels=legend_labels, **legend_args
-            )  # manually labeling legend is sensitive to order
-
-        if text:
-            ax.text(
-                text[0],
-                text[1],
-                text[2],
-                transform=ax.transAxes,
-                fontsize=text_fontsize,
-                fontstyle=text_fontstyle,
-            )
-
+            legend_kwargs = {}
+            if legend_args is not None:
+                legend_kwargs = legend_args
+            fig_legend(
+                fig, legend_labels, **legend_kwargs
+            )  # legend labels are sensitive to order
     if save:
         plt.savefig(save, bbox_inches="tight")
     plt.show()
 
 
 def format_cbar_default(tick):
-    """Default string formatting for numerical color bar ticks"""
+    """Default string formatting for numerical color bar ticks."""
     return f"{tick:.2f}"
 
 
-def make_heat_map(
+def heat_map(
     pd_ct,
     labels,
-    colors=None,
+    fig_size=(18, 10),
+    colors=HEATMAP_COLORS,
     interpolation=None,
     min_max=None,
     save="",
     cbar_format=format_cbar_default,
 ):
-    """Makes a 2D heatmap from a pd.crosstab.
+    """Make a 2D heatmap from a pd.crosstab.
+
     - labels are a dictionary with the following keys:
         "title", "x_label", "y_label", "cbar_label"
-    - colors are the list of color graduations to use for the heatmap
     - interpolation is the interpolation technique to smooth the heatmap boxes
-    - min_max is a tuple of the min/max values for the color graduations"""
-
+    - min_max is a tuple of the min/max values for the color graduations
+    """
     # figure and title
     fig, ax = plt.subplots()
-    fig_size = (18, 10)
     fig.set_size_inches(fig_size)  # width, height
     ax.set_title(labels["title"], fontsize=22, pad=50)
 
@@ -390,7 +389,7 @@ def make_heat_map(
 
 
 def make_marker_map(map_data: pd.DataFrame, text_fmt: str, map_center=NYC_MAP_CENTER):
-    """Returns a prepared Folium map"""
+    """Return a prepared Folium map."""
     fmap = folium.Map(location=map_center, zoom_start=10, tiles="OpenStreetMap")
     js_callback = (
         "function (row) {"
@@ -425,9 +424,11 @@ def prep_choropleth_df(
     round_agg_values=False,
     round_decimal=2,
 ):
-    """Returns a gpd.GeoDataFrame prepared for a Folium Choropleth.
-    gpd.GeoDataFrame contains a column for index values, a column for an aggregated value,
-    and a column for the associated geometry"""
+    """Return a gpd.GeoDataFrame prepared for a Folium Choropleth.
+
+    gpd.GeoDataFrame contains a column for index values, a column for an
+    aggregated value, and a column for the associated geometry.
+    """
     groupby_df = df[mask].groupby(by=groupby_col)[agg_col].agg(agg_metrics).to_frame()
     groupby_df[agg_col] /= divisor
     if round_agg_values:
@@ -435,9 +436,7 @@ def prep_choropleth_df(
         if round_decimal == 0:
             groupby_df[agg_col] = groupby_df[agg_col].astype(int)
     groupby_df.index = groupby_df.index.astype(int)
-    groupby_df[groupby_df.index.name] = (
-        groupby_df.index
-    )
+    groupby_df[groupby_df.index.name] = groupby_df.index
     return gpd.GeoDataFrame(groupby_df, geometry=geoseries)
 
 
@@ -457,7 +456,7 @@ def add_choropleth(
     line_opacity=1.0,
     legend_name="",
 ):
-    """Adds a choropleth to a folium.Map from a gpd.GeoDataFrame"""
+    """Add a choropleth to a folium.Map from a gpd.GeoDataFrame."""
     choropleth = folium.Choropleth(
         geo_data=gdf,
         data=gdf,

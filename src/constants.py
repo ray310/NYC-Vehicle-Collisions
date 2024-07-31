@@ -1,4 +1,4 @@
-""" Project constants, parameters, and settings."""
+"""Project constants, parameters, and settings."""
 
 COORD_REF_SYSTEM = "EPSG:4326"  # default geojson CRS
 
