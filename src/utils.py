@@ -13,7 +13,13 @@ from sklearn import model_selection
 
 
 def min_max_across_crosstabs(
-    categories, cat_series, idx_series, col_series, value_series=None, aggfunc=None
+    categories,
+    cat_series,
+    idx_series,
+    col_series,
+    value_series=None,
+    aggfunc=None,
+    divisor=1,
 ):
     """Return the min and max values of crosstabs across all categories.
 
@@ -31,7 +37,10 @@ def min_max_across_crosstabs(
         values = None
         if aggfunc:
             values = value_series[is_true]
-        ct = pd.crosstab(index=idx, columns=cols, values=values, aggfunc=aggfunc)
+        ct = (
+            pd.crosstab(index=idx, columns=cols, values=values, aggfunc=aggfunc)
+            / divisor
+        )
 
         min_val = min(min_val, min(ct.min()))  # ct.min() / max() return pd.Series
         max_val = max(max_val, max(ct.max()))
